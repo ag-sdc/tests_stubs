@@ -39,6 +39,51 @@ java_library {
     host_supported: true,
 }
 
+java_library {
+    name: "compatibility-device-util-axt",
+    host_supported: true,
+}
+
+java_library {
+    name: "CtsVirtualDeviceCommonLib",
+    host_supported: true,
+}
+
+java_library {
+    name: "collector-helper-utilities",
+    host_supported: true,
+}
+
+java_library {
+    name: "collector-device-lib-platform",
+    host_supported: true,
+}
+
+java_library {
+    name: "cronet_aml_api_java",
+    host_supported: true,
+}
+
+java_library {
+    name: "cronet_aml_java__testing",
+    host_supported: true,
+}
+
+java_library {
+    name: "cronet_java_tests",
+    host_supported: true,
+}
+
+cc_library {
+    name: "cronet_aml_components_cronet_android_cronet__testing",
+    host_supported: true,
+}
+
+cc_library {
+    name: "cronet_aml_components_cronet_android_cronet_tests__testing",
+    host_supported: true,
+}
+
 java_library_host {
     name: "cts-tradefed",
 }
@@ -73,6 +118,18 @@ java_library_host {
 
 java_library_host {
     name: "cts-host-utils",
+}
+
+java_library_host {
+    name: "cts-tradefed-harness",
+}
+
+java_library_host {
+    name: "guava-testlib",
+}
+
+java_library_host {
+    name: "jimfs",
 }
 
 // -----------------------------------------------------------------------------
@@ -143,3 +200,174 @@ python_library {
     name: "pyfakefs",
     host_supported: true,
 }
+
+python_library {
+    name: "pandora-python",
+    host_supported: true,
+}
+
+python_library {
+    name: "typing_extensions",
+    host_supported: true,
+}
+
+python_library {
+    name: "libavatar",
+    host_supported: true,
+}
+
+python_library {
+    name: "pyserial",
+    host_supported: true,
+}
+
+cc_binary_host {
+    name: "bcc_compat",
+}
+
+cc_binary_host {
+    name: "llvm-rs-cc",
+}
+
+cc_binary_host {
+    name: "lld",
+}
+
+cc_library_headers {
+    name: "rutabaga_gfx_ffi_headers",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "librutabaga_gfx_ffi",
+    host_supported: true,
+    vendor_available: true,
+}
+
+java_library {
+    name: "caliper-api-target",
+    host_supported: true,
+}
+
+java_library {
+    name: "hilt_android",
+    host_supported: true,
+}
+
+
+// -----------------------------------------------------------------------------
+// Profiling Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "framework-profiling",
+    host_supported: true,
+}
+
+java_library {
+    name: "framework-profiling.stubs",
+    host_supported: true,
+}
+
+java_library {
+    name: "framework-profiling.stubs.system",
+    host_supported: true,
+}
+
+java_library {
+    name: "framework-profiling.stubs.module_lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "framework-profiling.stubs.exportable",
+    host_supported: true,
+}
+
+java_library {
+    name: "framework-profiling.stubs.exportable.system",
+    host_supported: true,
+}
+
+java_library {
+    name: "framework-profiling.stubs.exportable.module_lib",
+    host_supported: true,
+}
+
+// -----------------------------------------------------------------------------
+// SettingsLib Spa UI Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "lottie_compose",
+    host_supported: true,
+}
+
+java_library {
+    name: "MPAndroidChart",
+    host_supported: true,
+}
+
+// -----------------------------------------------------------------------------
+// Connectivity HttpClient Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "httpclient_api",
+    host_supported: true,
+}
+
+java_library {
+    name: "httpclient_impl",
+    host_supported: true,
+}
+
+java_library {
+    name: "http_client_logging",
+    host_supported: true,
+}
+
+// -----------------------------------------------------------------------------
+// Trusty Fuzzer Stubs
+// -----------------------------------------------------------------------------
+cc_library {
+    name: "libtrusty",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libtrusty_coverage",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libtrusty_fuzz_utils",
+    host_supported: true,
+    vendor_available: true,
+}
+
+// -----------------------------------------------------------------------------
+// MTS Native Test Helper Stub
+// -----------------------------------------------------------------------------
+cc_library_static {
+    name: "libnativetesthelper_jni",
+    host_supported: true,
+}
+
+cc_binary_host {
+    name: "fsverity",
+}
+
+// -----------------------------------------------------------------------------
+// Core Lambda Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "core-lambda-stubs",
+    host_supported: true,
+}
+
+java_library {
+    name: "prebuilt_core-lambda-stubs",
+    host_supported: true,
+}
+
