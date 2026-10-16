@@ -1,0 +1,145 @@
+// Test harness and CTS stubs for slim Android build graph resolution
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+// -----------------------------------------------------------------------------
+// Test Defaults
+// -----------------------------------------------------------------------------
+java_defaults {
+    name: "cts_defaults",
+}
+
+java_defaults {
+    name: "mts-target-sdk-version-current",
+}
+
+java_defaults {
+    name: "cts_support_defaults",
+}
+
+rust_defaults {
+    name: "rdroidtest.defaults",
+}
+
+java_defaults {
+    name: "tradefed_errorprone_defaults",
+}
+
+// -----------------------------------------------------------------------------
+// Test Harness Java Libraries
+// -----------------------------------------------------------------------------
+java_library {
+    name: "platform-test-annotations",
+    host_supported: true,
+}
+
+java_library {
+    name: "flag-junit",
+    host_supported: true,
+}
+
+java_library_host {
+    name: "cts-tradefed",
+}
+
+java_library_host {
+    name: "cts-install-lib-host",
+}
+
+java_library_host {
+    name: "cts-statsd-atom-host-test-utils",
+}
+
+java_library_host {
+    name: "jsonlib",
+}
+
+java_library_host {
+    name: "json",
+}
+
+java_library_host {
+    name: "vogarexpectlib",
+}
+
+java_library_host {
+    name: "car-cts-host-util",
+}
+
+java_library_host {
+    name: "cts-shim-host-lib",
+}
+
+java_library_host {
+    name: "cts-host-utils",
+}
+
+// -----------------------------------------------------------------------------
+// Profiling API Contributions
+// -----------------------------------------------------------------------------
+java_api_contribution {
+    name: "framework-profiling.stubs.source.api.contribution",
+    api_surface: "public",
+    api_file: "api/framework-profiling.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "framework-profiling.stubs.source.system.api.contribution",
+    api_surface: "system",
+    api_file: "api/framework-profiling.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "framework-profiling.stubs.source.module_lib.api.contribution",
+    api_surface: "module-lib",
+    api_file: "api/framework-profiling.txt",
+    visibility: ["//visibility:public"],
+}
+
+// -----------------------------------------------------------------------------
+// Test & Fuzzing Native Libraries
+// -----------------------------------------------------------------------------
+cc_library {
+    name: "libssl_fuzz_unsafe",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libcrypto_fuzz_unsafe",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libflagtest",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libvts_vintf_test_common",
+    host_supported: true,
+    vendor_available: true,
+    recovery_available: true,
+}
+
+// -----------------------------------------------------------------------------
+// Test Tools & Python Test Frameworks
+// -----------------------------------------------------------------------------
+cc_binary_host {
+    name: "hwtrust",
+}
+
+python_library {
+    name: "mobly",
+    host_supported: true,
+}
+
+python_library {
+    name: "pyfakefs",
+    host_supported: true,
+}
