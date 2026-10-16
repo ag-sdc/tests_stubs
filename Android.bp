@@ -362,12 +362,8 @@ cc_binary_host {
 // Core Lambda Stubs
 // -----------------------------------------------------------------------------
 java_library {
-    name: "core-lambda-stubs",
-    host_supported: true,
-}
-
-java_library {
     name: "prebuilt_core-lambda-stubs",
     host_supported: true,
 }
+
 
