@@ -26,9 +26,6 @@ java_defaults {
     name: "tradefed_errorprone_defaults",
 }
 
-cc_defaults {
-    name: "erofs-utils_export_defaults",
-}
 
 
 // -----------------------------------------------------------------------------
