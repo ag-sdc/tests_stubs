@@ -686,4 +686,24 @@ java_library {
     host_supported: true,
 }
 
+java_library {
+    name: "compatibility-device-util-axt-minus-dexmaker",
+    host_supported: true,
+}
+
+java_library {
+    name: "ScreenshotComposeUtilsLib",
+    host_supported: true,
+}
+
+java_library {
+    name: "app-helpers-handheld-interfaces",
+    host_supported: true,
+}
+
+java_library {
+    name: "health-testing-utils",
+    host_supported: true,
+}
+
 
