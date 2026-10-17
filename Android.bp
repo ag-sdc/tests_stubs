@@ -316,3 +316,172 @@ cc_defaults {
     host_supported: true,
 }
 
+// -----------------------------------------------------------------------------
+// Test Runner, Framework, and Harness Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "flag-junit-base",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockito-target-minus-junit4",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockito-target",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockito-target-extended",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockito-kotlin2",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockwebserver",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-install-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-core-test-runner-axt",
+    host_supported: true,
+}
+
+java_library {
+    name: "ctstestrunner-axt",
+    host_supported: true,
+}
+
+java_library {
+    name: "ctstestserver",
+    host_supported: true,
+}
+
+java_library {
+    name: "compatibility-common-util-devicesidelib",
+    host_supported: true,
+}
+
+java_library {
+    name: "guava-android-testlib",
+    host_supported: true,
+}
+
+java_library {
+    name: "mobly-snippet-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "libnanohttpd",
+    host_supported: true,
+}
+
+java_library {
+    name: "Harrier",
+    host_supported: true,
+}
+
+java_library {
+    name: "SatelliteClient",
+    host_supported: true,
+}
+
+// -----------------------------------------------------------------------------
+// UI Test, Flicker, & Performance Benchmark Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "flickerlib",
+    host_supported: true,
+}
+
+java_library {
+    name: "flickerlib-apphelpers",
+    host_supported: true,
+}
+
+java_library {
+    name: "flickerlib-helpers",
+    host_supported: true,
+}
+
+java_library {
+    name: "app-helpers-core",
+    host_supported: true,
+}
+
+java_library {
+    name: "common-platform-scenarios",
+    host_supported: true,
+}
+
+java_library {
+    name: "platform-test-composers",
+    host_supported: true,
+}
+
+java_library {
+    name: "platform-test-rules",
+    host_supported: true,
+}
+
+java_library {
+    name: "microbenchmark-device-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "longevity-device-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "subsampling-scale-image-view",
+    host_supported: true,
+}
+
+// -----------------------------------------------------------------------------
+// App / Media / Tool Support Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "cuckoofilter",
+    host_supported: true,
+}
+
+java_library {
+    name: "androidx.camera.extensions.stub",
+    host_supported: true,
+}
+
+java_library {
+    name: "glide-prebuilt",
+    host_supported: true,
+}
+
+java_library {
+    name: "glide-gifdecoder-prebuilt",
+    host_supported: true,
+}
+
+java_library {
+    name: "glide-disklrucache-prebuilt",
+    host_supported: true,
+}
+
+java_library {
+    name: "glide-annotation-and-compiler-prebuilt",
+    host_supported: true,
+}
+
