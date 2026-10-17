@@ -720,4 +720,12 @@ cc_library {
     vendor_available: true,
 }
 
+cc_defaults {
+    name: "carwatchdogd_defaults",
+}
+
+cc_defaults {
+    name: "libwatchdog_perf_service_defaults",
+}
+
 
