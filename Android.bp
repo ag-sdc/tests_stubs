@@ -480,20 +480,3 @@ java_library {
     host_supported: true,
 }
 
-// -----------------------------------------------------------------------------
-// Automotive Stubs
-// -----------------------------------------------------------------------------
-cc_defaults {
-    name: "vhalclient_defaults",
-}
-
-cc_defaults {
-    name: "android-automotive-large-parcelable-defaults",
-}
-
-cc_library {
-    name: "android-automotive-large-parcelable-lib",
-    host_supported: true,
-    vendor_available: true,
-}
-
