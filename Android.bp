@@ -461,11 +461,6 @@ java_library {
 }
 
 java_library {
-    name: "androidx.camera.extensions.stub",
-    host_supported: true,
-}
-
-java_library {
     name: "glide-prebuilt",
     host_supported: true,
 }
