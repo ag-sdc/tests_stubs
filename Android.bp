@@ -524,4 +524,77 @@ java_library {
     host_supported: true,
 }
 
+// -----------------------------------------------------------------------------
+// Additional CTS & Unit Test Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "Nene",
+    host_supported: true,
+}
+
+java_library {
+    name: "junitxml",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-wm-util",
+    host_supported: true,
+}
+
+java_library {
+    name: "commands-helper",
+    host_supported: true,
+}
+
+java_library {
+    name: "TestApp",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-rollback-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "platform-test-options",
+    host_supported: true,
+}
+
+java_library {
+    name: "platform-parametric-runner-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "compatibility-device-preconditions",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockito-target-inline-minus-junit4",
+    host_supported: true,
+}
+
+java_library {
+    name: "sts-device-util",
+    host_supported: true,
+}
+
+java_library {
+    name: "CtsAccessibilityCommon",
+    host_supported: true,
+}
+
+cc_library {
+    name: "libdexmakerjvmtiagent",
+    host_supported: true,
+}
+
+cc_library {
+    name: "libstaticjvmtiagent",
+    host_supported: true,
+}
+
 
