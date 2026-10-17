@@ -839,3 +839,38 @@ java_library {
     name: "car-frameworks-service-module",
     host_supported: true,
 }
+
+// -----------------------------------------------------------------------------
+// ART module_exports + MTS test-support stubs
+// consumers: art/build/sdk art-module-test-exports (java_libs/java_tests),
+// libnativehelper/tests_mts + packages/modules/Permission MTS tests
+// -----------------------------------------------------------------------------
+java_library {
+    name: "nativetesthelper",
+    host_supported: true,
+}
+
+java_library {
+    name: "okhttp-nojarjar",
+    host_supported: true,
+}
+
+java_library {
+    name: "okhttp-tests-nojarjar",
+    host_supported: true,
+}
+
+java_library {
+    name: "okhttp-for-host",
+    host_supported: true,
+}
+
+java_test {
+    name: "apache-harmony-tests",
+    host_supported: true,
+}
+
+java_test {
+    name: "apache-harmony-jdwp-tests",
+    host_supported: true,
+}
