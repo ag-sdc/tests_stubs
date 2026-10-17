@@ -86,6 +86,11 @@ cc_library {
     host_supported: true,
 }
 
+cc_library {
+    name: "cronet_aml_third_party_netty_tcnative_netty_tcnative_so__testing",
+    host_supported: true,
+}
+
 java_library_host {
     name: "cts-tradefed",
 }
@@ -599,6 +604,13 @@ cc_library {
     stl: "libc++_static",
 }
 
+cc_library {
+    name: "libmultiplejvmtiagentsinterferenceagent",
+    host_supported: true,
+    sdk_version: "current",
+    stl: "libc++_static",
+}
+
 java_library {
     name: "collector-device-lib",
     host_supported: true,
@@ -796,4 +808,34 @@ cc_library_static {
     name: "libnos_citadel_for_recovery",
     recovery_available: true,
     vendor_available: true,
+}
+java_library {
+    name: "CtsSurfaceValidatorLib",
+    host_supported: true,
+}
+
+java_library {
+    name: "VtsHalHidlTargetTestBase",
+    host_supported: true,
+}
+
+cc_library {
+    name: "chre_client",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "android.hardware.automotive.can@libnetdevice",
+    host_supported: true,
+}
+
+cc_library {
+    name: "libnl++",
+    host_supported: true,
+}
+
+java_library {
+    name: "car-frameworks-service-module",
+    host_supported: true,
 }
