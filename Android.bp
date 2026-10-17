@@ -728,4 +728,9 @@ cc_defaults {
     name: "libwatchdog_perf_service_defaults",
 }
 
+java_library {
+    name: "xmp_toolkit",
+    host_supported: true,
+}
+
 
