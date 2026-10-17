@@ -364,10 +364,16 @@ cc_binary_host {
 // Jacoco Stubs
 // -----------------------------------------------------------------------------
 java_library {
+
     name: "jacocoagent",
     host_supported: true,
 }
 
-
-
+// -----------------------------------------------------------------------------
+// UltraHDR Fuzzer Stubs
+// -----------------------------------------------------------------------------
+cc_defaults {
+    name: "ultrahdr_fuzzer_defaults",
+    host_supported: true,
+}
 
