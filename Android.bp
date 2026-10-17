@@ -134,29 +134,6 @@ java_library_host {
     name: "jimfs",
 }
 
-// -----------------------------------------------------------------------------
-// Profiling API Contributions
-// -----------------------------------------------------------------------------
-java_api_contribution {
-    name: "framework-profiling.stubs.source.api.contribution",
-    api_surface: "public",
-    api_file: "api/framework-profiling.txt",
-    visibility: ["//visibility:public"],
-}
-
-java_api_contribution {
-    name: "framework-profiling.stubs.source.system.api.contribution",
-    api_surface: "system",
-    api_file: "api/framework-profiling.txt",
-    visibility: ["//visibility:public"],
-}
-
-java_api_contribution {
-    name: "framework-profiling.stubs.source.module_lib.api.contribution",
-    api_surface: "module-lib",
-    api_file: "api/framework-profiling.txt",
-    visibility: ["//visibility:public"],
-}
 
 // -----------------------------------------------------------------------------
 // Test & Fuzzing Native Libraries
@@ -257,44 +234,6 @@ java_library {
     host_supported: true,
 }
 
-
-// -----------------------------------------------------------------------------
-// Profiling Stubs
-// -----------------------------------------------------------------------------
-java_library {
-    name: "framework-profiling",
-    host_supported: true,
-}
-
-java_library {
-    name: "framework-profiling.stubs",
-    host_supported: true,
-}
-
-java_library {
-    name: "framework-profiling.stubs.system",
-    host_supported: true,
-}
-
-java_library {
-    name: "framework-profiling.stubs.module_lib",
-    host_supported: true,
-}
-
-java_library {
-    name: "framework-profiling.stubs.exportable",
-    host_supported: true,
-}
-
-java_library {
-    name: "framework-profiling.stubs.exportable.system",
-    host_supported: true,
-}
-
-java_library {
-    name: "framework-profiling.stubs.exportable.module_lib",
-    host_supported: true,
-}
 
 // -----------------------------------------------------------------------------
 // SettingsLib Spa UI Stubs
