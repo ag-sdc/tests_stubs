@@ -590,10 +590,79 @@ java_library {
 cc_library {
     name: "libdexmakerjvmtiagent",
     host_supported: true,
+    sdk_version: "current",
+    stl: "libc++_static",
 }
 
 cc_library {
     name: "libstaticjvmtiagent",
+    host_supported: true,
+    sdk_version: "current",
+    stl: "libc++_static",
+}
+
+java_library {
+    name: "collector-device-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "uiautomator-helpers",
+    host_supported: true,
+}
+
+java_library {
+    name: "CtsAppSearchTestUtils",
+    host_supported: true,
+}
+
+java_library {
+    name: "rappor-tests",
+    host_supported: true,
+}
+
+java_library {
+    name: "device-time-shell-utils",
+    host_supported: true,
+}
+
+java_library {
+    name: "print-test-util-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "flickerlib-parsers",
+    host_supported: true,
+}
+
+java_library {
+    name: "metrics-helper-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "settings-helper",
+    host_supported: true,
+}
+
+java_library {
+    name: "sysui-helper",
+    host_supported: true,
+}
+
+java_library {
+    name: "timeresult-helper-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-companion-common",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-companion-uicommon",
     host_supported: true,
 }
 
