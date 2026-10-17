@@ -666,4 +666,24 @@ java_library {
     host_supported: true,
 }
 
+java_library {
+    name: "TestParameterInjector",
+    host_supported: true,
+}
+
+java_library {
+    name: "hilt_android_testing",
+    host_supported: true,
+}
+
+java_library {
+    name: "glide-integration-recyclerview-prebuilt",
+    host_supported: true,
+}
+
+java_library {
+    name: "cts-install-lib-java",
+    host_supported: true,
+}
+
 
