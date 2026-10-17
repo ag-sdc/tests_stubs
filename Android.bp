@@ -361,33 +361,11 @@ cc_binary_host {
 }
 
 // -----------------------------------------------------------------------------
-// Core Lambda Stubs
-// -----------------------------------------------------------------------------
-java_library {
-    name: "prebuilt_core-lambda-stubs",
-    host_supported: true,
-}
-
-// -----------------------------------------------------------------------------
 // Jacoco Stubs
 // -----------------------------------------------------------------------------
 java_library {
     name: "jacocoagent",
     host_supported: true,
-}
-
-// -----------------------------------------------------------------------------
-// Java VM Headers
-// -----------------------------------------------------------------------------
-cc_library_headers {
-    name: "javavm_headers",
-    host_supported: true,
-    header_libs: ["jni_headers"],
-    export_header_lib_headers: ["jni_headers"],
-    apex_available: [
-        "//apex_available:platform",
-        "//apex_available:anyapex",
-    ],
 }
 
 
