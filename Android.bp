@@ -238,10 +238,6 @@ java_library {
 // -----------------------------------------------------------------------------
 // SettingsLib Spa UI Stubs
 // -----------------------------------------------------------------------------
-java_library {
-    name: "lottie_compose",
-    host_supported: true,
-}
 
 java_library {
     name: "MPAndroidChart",
