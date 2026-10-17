@@ -291,8 +291,9 @@ cc_library_static {
     host_supported: true,
 }
 
-cc_binary_host {
+cc_binary {
     name: "fsverity",
+    host_supported: true,
 }
 
 // -----------------------------------------------------------------------------
@@ -714,6 +715,12 @@ java_library {
 java_library {
     name: "handheld-app-helpers",
     host_supported: true,
+}
+
+cc_library {
+    name: "android.hardware.automotive.occupant_awareness-V1-ndk",
+    host_supported: true,
+    vendor_available: true,
 }
 
 
