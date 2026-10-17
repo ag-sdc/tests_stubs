@@ -763,3 +763,19 @@ cc_library {
     host_supported: true,
     vendor_available: true,
 }
+
+cc_library_static {
+    name: "VtsHalHidlTestUtils",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library_static {
+    name: "libinit_test_utils",
+    host_supported: true,
+}
+
+cc_library_static {
+    name: "libchrome_test_helpers",
+    host_supported: true,
+}
