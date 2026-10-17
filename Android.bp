@@ -727,10 +727,39 @@ cc_defaults {
 cc_defaults {
     name: "libwatchdog_perf_service_defaults",
 }
-
 java_library {
     name: "xmp_toolkit",
     host_supported: true,
 }
 
+java_library_host {
+    name: "flag-junit-host",
+}
 
+cc_library {
+    name: "libfsverity",
+    host_supported: true,
+    vendor_available: true,
+    recovery_available: true,
+}
+
+cc_binary {
+    name: "fsverity_multilib",
+    compile_multilib: "both",
+}
+
+cc_library {
+    name: "libicu_cts_stub",
+    host_supported: true,
+}
+
+cc_library {
+    name: "libwatchdog_perf_service",
+    host_supported: true,
+}
+
+cc_library {
+    name: "android.hardware.automotive.vehicle@2.0",
+    host_supported: true,
+    vendor_available: true,
+}
