@@ -814,7 +814,7 @@ java_library {
     host_supported: true,
 }
 
-java_library {
+cc_library_static {
     name: "VtsHalHidlTargetTestBase",
     host_supported: true,
 }
