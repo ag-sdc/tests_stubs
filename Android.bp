@@ -480,3 +480,42 @@ java_library {
     host_supported: true,
 }
 
+// -----------------------------------------------------------------------------
+// Core / Connectivity / Flicker Test Stubs
+// -----------------------------------------------------------------------------
+java_library {
+    name: "apache-xml-tests",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockftpserver",
+    host_supported: true,
+}
+
+java_library {
+    name: "nist-pkix-tests",
+    host_supported: true,
+}
+
+java_library {
+    name: "sqlite-jdbc",
+    host_supported: true,
+}
+
+java_library {
+    name: "mockito-target-extended-minus-junit4",
+    host_supported: true,
+}
+
+java_library {
+    name: "launcher-helper-lib",
+    host_supported: true,
+}
+
+java_library {
+    name: "launcher-aosp-tapl",
+    host_supported: true,
+}
+
+
