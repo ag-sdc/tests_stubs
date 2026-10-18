@@ -881,3 +881,10 @@ java_test {
 android_library {
     name: "ActivityContext",
 }
+
+// android.car is defined in packages/services/Car (dropped from the framework-only tree);
+// consumer is test-only (PermissionControllerMockingTests). sdk_version mirrors upstream android.car-defaults.
+java_library {
+    name: "android.car",
+    sdk_version: "system_current",
+}
