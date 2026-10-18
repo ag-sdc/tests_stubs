@@ -849,6 +849,18 @@ cc_library_headers {
     vendor: true,
 }
 
+// frameworks/rs is dropped from the framework-only tree; consumer is
+// android.hardware.renderscript@1.0-impl (runtime_libs).
+cc_library_shared {
+    name: "libRS_internal",
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "libRSDriver",
+    vendor_available: true,
+}
+
 // -----------------------------------------------------------------------------
 // ART module_exports + MTS test-support stubs
 // consumers: art/build/sdk art-module-test-exports (java_libs/java_tests),
