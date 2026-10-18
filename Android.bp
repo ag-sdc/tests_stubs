@@ -954,6 +954,16 @@ cc_library_static {
     host_supported: true,
 }
 
+// external/giflib is dropped from the framework-only tree (no shadow, not in the registry); consumers:
+// libhwui + hwui_unit_tests + libandroid_runtime (static_libs, android target only). Mirrors upstream
+// (sdk_version "9", vendor_available); GIFMovie.cpp includes gif_lib.h at compile time — resolution
+// stub only (real header/sources absent).
+cc_library_static {
+    name: "libgif",
+    sdk_version: "9",
+    vendor_available: true,
+}
+
 // -----------------------------------------------------------------------------
 // ART module_exports + MTS test-support stubs
 // consumers: art/build/sdk art-module-test-exports (java_libs/java_tests),
