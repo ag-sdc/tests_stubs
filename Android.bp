@@ -833,11 +833,20 @@ cc_library {
 cc_library {
     name: "libnl++",
     host_supported: true,
+    vendor_available: true,
 }
 
 java_library {
     name: "car-frameworks-service-module",
     host_supported: true,
+}
+
+// hardware/interfaces/automotive is dropped from the framework-only tree; consumer is the
+// vendor cc_test DefaultBroadcastRadioHalTestCase (header_libs). Upstream def lives in
+// automotive/vehicle/aidl/impl/hardware/Android.bp (cc_library_headers, vendor: true).
+cc_library_headers {
+    name: "IVehicleHardware",
+    vendor: true,
 }
 
 // -----------------------------------------------------------------------------
