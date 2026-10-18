@@ -895,3 +895,17 @@ java_library {
 cc_library_static {
     name: "android.hardware.automotive.evs@common-default-lib",
 }
+
+// external/libnos is not in the framework-only tree; consumer is the Pixel fastboot impl
+// (hardware/google/pixel/fastboot, recovery: true). x86_64-GSI-irrelevant; stub resolves analysis.
+cc_library_static {
+    name: "libnos_for_fastboot",
+    recovery_available: true,
+    vendor_available: true,
+}
+
+cc_library_static {
+    name: "libnos_citadel_for_fastboot",
+    recovery_available: true,
+    vendor_available: true,
+}
