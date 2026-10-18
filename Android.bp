@@ -888,3 +888,10 @@ java_library {
     name: "android.car",
     sdk_version: "module_current",
 }
+
+// android.hardware.automotive.evs@common-default-lib is defined in
+// hardware/interfaces/automotive/evs/common/utils/default (dropped from the framework-only tree);
+// consumer is test-only (VtsHalAutomotiveDisplayV1_0TargetTest).
+cc_library_static {
+    name: "android.hardware.automotive.evs@common-default-lib",
+}
