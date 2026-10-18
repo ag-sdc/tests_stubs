@@ -861,7 +861,7 @@ cc_library_shared {
     vendor_available: true,
 }
 
-// External codec sources (dav1d, libgav1, libhevc, libavc, libmpeg2, libgsm) are not in the
+// External codec sources (dav1d, libgav1, libhevc, libavc, libmpeg2, libgsm, libogg) are not in the
 // framework-only tree and have no extractive shadows yet (not in the ag registry); consumers
 // are libcodec2_soft_* / libstagefright codecs / goldfish C2 / voip JNI (all static_libs).
 cc_library_static {
@@ -922,6 +922,14 @@ cc_library_static {
 
 cc_library_static {
     name: "libgsm",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+}
+
+cc_library_static {
+    name: "libogg",
     vendor_available: true,
     product_available: true,
     recovery_available: true,
