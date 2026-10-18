@@ -874,3 +874,10 @@ java_test {
     name: "apache-harmony-jdwp-tests",
     host_supported: true,
 }
+
+// ActivityContext is defined in the cts repo (common/device-side/bedstead/activitycontext);
+// the framework-only tree drops cts. Consumers are test-only (FrameworksServicesTests,
+// PackageManagerServiceServerTests), so an empty stub resolves the build graph.
+android_library {
+    name: "ActivityContext",
+}
