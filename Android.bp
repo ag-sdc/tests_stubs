@@ -936,6 +936,24 @@ cc_library_static {
     host_supported: true,
 }
 
+// external/XNNPACK + external/pthreadpool are dropped from the framework-only tree (no shadows yet);
+// consumer is the NN sample-float-xnnpack driver service (static_libs, proprietary).
+cc_library_static {
+    name: "libXNNPACK",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+}
+
+cc_library_static {
+    name: "libpthreadpool",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+}
+
 // -----------------------------------------------------------------------------
 // ART module_exports + MTS test-support stubs
 // consumers: art/build/sdk art-module-test-exports (java_libs/java_tests),
