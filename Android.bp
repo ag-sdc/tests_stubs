@@ -964,6 +964,14 @@ cc_library_static {
     vendor_available: true,
 }
 
+// system/memory/libmemtrack (standalone googlesource repo) is dropped from the framework-only tree;
+// consumer: libandroid_runtime (shared_libs). VNDK v30-v34 prebuilts exist but are vndk_prebuilt_shared
+// (VNDK ABI contexts only). Mirrors upstream (cc_library_shared, vendor_available).
+cc_library_shared {
+    name: "libmemtrack",
+    vendor_available: true,
+}
+
 // -----------------------------------------------------------------------------
 // ART module_exports + MTS test-support stubs
 // consumers: art/build/sdk art-module-test-exports (java_libs/java_tests),
