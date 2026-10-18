@@ -886,5 +886,5 @@ android_library {
 // consumer is test-only (PermissionControllerMockingTests). sdk_version mirrors upstream android.car-defaults.
 java_library {
     name: "android.car",
-    sdk_version: "system_current",
+    sdk_version: "module_current",
 }
