@@ -26,8 +26,6 @@ java_defaults {
     name: "tradefed_errorprone_defaults",
 }
 
-
-
 // -----------------------------------------------------------------------------
 // Test Harness Java Libraries
 // -----------------------------------------------------------------------------
@@ -79,16 +77,25 @@ java_library {
 cc_library {
     name: "cronet_aml_components_cronet_android_cronet__testing",
     host_supported: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
 }
 
 cc_library {
     name: "cronet_aml_components_cronet_android_cronet_tests__testing",
     host_supported: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
 }
 
 cc_library {
     name: "cronet_aml_third_party_netty_tcnative_netty_tcnative_so__testing",
     host_supported: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
 }
 
 java_library_host {
@@ -138,7 +145,6 @@ java_library_host {
 java_library_host {
     name: "jimfs",
 }
-
 
 // -----------------------------------------------------------------------------
 // Test & Fuzzing Native Libraries
@@ -202,6 +208,21 @@ python_library {
     host_supported: true,
 }
 
+python_library {
+    name: "pyyaml",
+    host_supported: true,
+}
+
+python_library {
+    name: "py-google-api-python-client",
+    host_supported: true,
+}
+
+python_library {
+    name: "py-oauth2client",
+    host_supported: true,
+}
+
 cc_binary_host {
     name: "bcc_compat",
 }
@@ -235,7 +256,6 @@ java_library {
     name: "hilt_android",
     host_supported: true,
 }
-
 
 // -----------------------------------------------------------------------------
 // SettingsLib Spa UI Stubs
@@ -291,6 +311,9 @@ cc_library {
 cc_library_static {
     name: "libnativetesthelper_jni",
     host_supported: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
 }
 
 cc_binary {
@@ -477,6 +500,11 @@ java_library {
 java_library {
     name: "glide-annotation-and-compiler-prebuilt",
     host_supported: true,
+}
+
+java_plugin {
+    name: "glide-annotation-processor",
+    processor_class: "com.bumptech.glide.annotation.compiler.GlideAnnotationProcessor",
 }
 
 // -----------------------------------------------------------------------------
@@ -1007,6 +1035,12 @@ java_test {
     host_supported: true,
 }
 
+java_test {
+    name: "conscrypt-tests",
+    host_supported: true,
+}
+
+
 // ActivityContext is defined in the cts repo (common/device-side/bedstead/activitycontext);
 // the framework-only tree drops cts. Consumers are test-only (FrameworksServicesTests,
 // PackageManagerServiceServerTests), so an empty stub resolves the build graph.
@@ -1041,3 +1075,2827 @@ cc_library_static {
     recovery_available: true,
     vendor_available: true,
 }
+
+// Stub for tools/security/remote_provisioning/hwtrust (dropped from framework-only manifest)
+cc_binary_host {
+    name: "hwtrust",
+}
+
+// Stub for external/tflite-support (for com.android.extservices)
+cc_library_shared {
+    name: "libtflite_support_classifiers_native",
+    host_supported: true,
+    sdk_version: "current",
+    min_sdk_version: "30",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+        "com.android.extservices",
+        "com.android.adservices",
+    ],
+}
+
+// -----------------------------------------------------------------------------
+// UWB Rust Stubs (external/uwb dropped from framework-only manifest)
+// -----------------------------------------------------------------------------
+
+rust_library {
+    name: "libuwb_uci_packets",
+    crate_name: "uwb_uci_packets",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+        "com.android.uwb",
+    ],
+    min_sdk_version: "Tiramisu",
+}
+
+rust_library {
+    name: "libuci_hal_android",
+    crate_name: "uci_hal_android",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+        "com.android.uwb",
+    ],
+    min_sdk_version: "Tiramisu",
+}
+
+rust_library {
+    name: "libuwb_core",
+    crate_name: "uwb_core",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+        "com.android.uwb",
+    ],
+    min_sdk_version: "Tiramisu",
+}
+
+rust_library {
+    name: "libuci_hal_android_with_mock",
+    crate_name: "uci_hal_android",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+        "com.android.uwb",
+    ],
+    min_sdk_version: "Tiramisu",
+}
+
+rust_library {
+    name: "libuwb_core_with_mock",
+    crate_name: "uwb_core",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+        "com.android.uwb",
+    ],
+    min_sdk_version: "Tiramisu",
+}
+
+rust_library {
+    name: "libhwtrust",
+    crate_name: "hwtrust",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+rust_library {
+    name: "libminijail_rust",
+    crate_name: "minijail_rust",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+rust_library {
+    name: "libdice_policy_builder",
+    crate_name: "dice_policy_builder",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+rust_library {
+    name: "libsecretkeeper_client",
+    crate_name: "secretkeeper_client",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+rust_library {
+    name: "libsecretkeeper_comm_nostd",
+    crate_name: "secretkeeper_comm_nostd",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+}
+
+cc_library_static {
+    name: "libhwtrust_cxx",
+    vendor_available: true,
+    host_supported: true,
+}
+
+cc_library_static {
+    name: "libcn-cbor",
+    vendor_available: true,
+    host_supported: true,
+}
+
+java_library {
+    name: "ot-daemon-testing",
+    sdk_version: "module_current",
+}
+
+// -----------------------------------------------------------------------------
+// Systematic Batch Stubs for Slim Framework Build
+// -----------------------------------------------------------------------------
+
+rust_library_rlib {
+    name: "libarbitrary",
+    crate_name: "arbitrary",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libbase64_rust",
+    crate_name: "base64",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libbitflags",
+    crate_name: "bitflags",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libchrono",
+    crate_name: "chrono",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libcriterion",
+    crate_name: "criterion",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libdowncast_rs",
+    crate_name: "downcast_rs",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library_rlib {
+    name: "libforeign_types",
+    crate_name: "foreign_types",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libfutures",
+    crate_name: "futures",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libhex",
+    crate_name: "hex",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libitertools",
+    crate_name: "itertools",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libjni",
+    crate_name: "jni",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "liblazy_static",
+    crate_name: "lazy_static",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "liblibc",
+    crate_name: "libc",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "liblibsqlite3_sys",
+    crate_name: "libsqlite3_sys",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libmacaddr",
+    crate_name: "macaddr",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libmemmap2",
+    crate_name: "memmap2",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libnix",
+    crate_name: "nix",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libnum_cpus",
+    crate_name: "num_cpus",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libnum_traits",
+    crate_name: "num_traits",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libonce_cell",
+    crate_name: "once_cell",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libopenssl",
+    crate_name: "openssl",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libpdl_runtime",
+    crate_name: "pdl_runtime",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libprotobuf",
+    crate_name: "protobuf",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libquiche",
+    crate_name: "quiche",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library_rlib {
+    name: "libquiche_static",
+    crate_name: "quiche",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "librand",
+    crate_name: "rand",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libring",
+    crate_name: "ring",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "librusqlite",
+    crate_name: "rusqlite",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libserde_cbor",
+    crate_name: "serde_cbor",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libstatic_assertions",
+    crate_name: "static_assertions",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libtempfile",
+    crate_name: "tempfile",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libthiserror",
+    crate_name: "thiserror",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libthread_local",
+    crate_name: "thread_local",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libtinytemplate",
+    crate_name: "tinytemplate",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libtokio",
+    crate_name: "tokio",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libtokio_util",
+    crate_name: "tokio_util",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libtracing",
+    crate_name: "tracing",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libtracing_subscriber",
+    crate_name: "tracing_subscriber",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "liburl",
+    crate_name: "url",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libuuid",
+    crate_name: "uuid",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library_rlib {
+    name: "libuuid_nostd",
+    crate_name: "uuid",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library_rlib {
+    name: "libzerocopy_nostd_noalloc",
+    crate_name: "zerocopy",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libasync_trait",
+    crate_name: "async_trait",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libcxx",
+    crate_name: "cxx",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "librustutils",
+    crate_name: "rustutils",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libanyhow",
+    crate_name: "anyhow",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libregex",
+    crate_name: "regex",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libserde",
+    crate_name: "serde",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libserde_json",
+    crate_name: "serde_json",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libclap",
+    crate_name: "clap",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libenv_logger",
+    crate_name: "env_logger",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "liblog_rust",
+    crate_name: "log",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+rust_library {
+    name: "libzerocopy",
+    crate_name: "zerocopy",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_binary_host {
+    name: "cxxbridge",
+    srcs: ["Empty.c"],
+}
+
+rust_ffi_static {
+    name: "librustc_demangle_static",
+    crate_name: "rustc_demangle",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+genrule {
+    name: "cxx-bridge-header",
+    srcs: ["include/rust/cxx.h"],
+    cmd: "cp $(in) $(out)",
+    out: ["rust/cxx.h"],
+}
+
+cc_library_headers {
+    name: "javavm_headers",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_headers {
+    name: "libgralloc_cb.ranchu",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_headers {
+    name: "libberberis_native_activity_headers",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_headers {
+    name: "libgtest_prod_headers",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libpng",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libpng_ndk",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "26",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libselinux",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libtinyalsa",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libincfs-utils",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libincfs",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libdataloader",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libzopfli",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "slicer",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "slicer_no_rtti",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "slicer_ndk_no_rtti",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_host_static {
+    name: "libgmock_host",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_host_static {
+    name: "libgtest_host",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libpsi",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libkeymaster4",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_shared {
+    name: "libkeymaster41",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libkeymint",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libpuresoftkeymasterdevice",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libsoftkeymasterdevice",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libsoft_attestation_cert",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "lib_android_keymaster_keymint_utils",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libapf",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "29",
+    stl: "none",
+    system_shared_libs: [],
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libapf_v5",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "29",
+    stl: "none",
+    system_shared_libs: [],
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libapfdisassembler",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "29",
+    stl: "none",
+    system_shared_libs: [],
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libbrotli",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+
+cc_library_static {
+    name: "libbluetooth-types",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libbluetooth_hci_pdl",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libjpeg_static_ndk",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "26",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_shared {
+    name: "libicing",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libimage_io",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "marisa-trie",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libxml2",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libgtest",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libgtest_main",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libgmock",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libgmock_main",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_binary {
+    name: "linkerconfig",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    stl: "none",
+    system_shared_libs: [],
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_binary {
+    name: "blkid_static",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_binary {
+    name: "secilc",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_binary {
+    name: "toybox",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_binary {
+    name: "iptables",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_binary {
+    name: "ip",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_binary {
+    name: "ss",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_binary_host {
+    name: "xmllint",
+    srcs: ["Empty.c"],
+}
+
+python_library_host {
+    name: "adb_py",
+    srcs: ["Empty.py"],
+}
+
+python_library_host {
+    name: "python-symbol",
+    srcs: ["Empty.py"],
+}
+
+python_library_host {
+    name: "fastboot_gen_rand",
+    srcs: ["Empty.py"],
+}
+
+python_library_host {
+    name: "image_gen_rand",
+    srcs: ["Empty.py"],
+}
+
+java_library {
+    name: "junit",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "junit-host",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "tradefed",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "truth",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "doclava",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "jsilver",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "compatibility-host-util",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "compatibility-tradefed",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "testng",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "hamcrest",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "hamcrest-library",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "apksig",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "tzids",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "tztools_common",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "jsr330",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "bluetooth-test-util-lib",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "exoplayer-media_apex",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+android_library {
+    name: "exoplayer-mediaprovider-ui",
+    srcs: ["Empty.java"],
+}
+
+android_library {
+    name: "mobile_data_downloader_lib",
+    srcs: ["Empty.java"],
+}
+
+android_library {
+    name: "android_downloader_lib",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "apache-velocity-engine-core",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "nist-sip",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "owasp-java-encoder",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "ucepresencelib",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "ukey2_jni",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "jazzer",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "libicing-java",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "icing-java-proto-lite",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
+
+java_api_contribution {
+    name: "framework-bluetooth.stubs.source.api.contribution",
+    api_surface: "public",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "framework-bluetooth.stubs.source.system.api.contribution",
+    api_surface: "system",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "framework-bluetooth.stubs.source.module_lib.api.contribution",
+    api_surface: "module-lib",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+rust_proc_macro {
+    name: "libpaste",
+    crate_name: "paste",
+    srcs: ["Empty.rs"],
+}
+
+cc_library {
+    name: "libjpeg",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_headers {
+    name: "libdynamic_depth-public_headers",
+    host_supported: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_headers {
+    name: "libdynamic_depth-internal_headers",
+    host_supported: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library {
+    name: "libdynamic_depth",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+}
+
+rust_library {
+    name: "libandroid_logger",
+    crate_name: "android_logger",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+droiddoc_exported_dir {
+    name: "droiddoc-templates-sdk",
+    path: "api",
+}
+
+genrule {
+    name: "platform_tools_version",
+    cmd: "echo '#define PLATFORM_TOOLS_VERSION \"34.0.0\"' > $(out)",
+    out: ["platform_tools_version.h"],
+}
+
+// -----------------------------------------------------------------------------
+// Transitive AIDL/HIDL & SDK Stub Stubs for framework-minus-apex
+// -----------------------------------------------------------------------------
+
+java_library {
+    name: "cronet_aml_java",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-virtualization.stubs.module_lib",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.exportable",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.exportable.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.exportable.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.source",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.source.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.stubs.source.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-bluetooth.impl",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Batch resolved dependencies from comprehensive tree scan
+
+java_library {
+    name: "truth-java8-extension",
+    host_supported: true,
+    sdk_version: "current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "truth-liteproto-extension",
+    host_supported: true,
+    sdk_version: "current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "cts-input-lib",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "exclude-annotation",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-telephony",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "glide-integration-webpdecoder-prebuilt",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "jacoco-stubs",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "sdk_module-lib_current_framework-connectivity",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "sdk_module-lib_current_framework-permission-s",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+cc_defaults {
+    name: "libwifi-hal-mediatek",
+}
+
+cc_defaults {
+    name: "libwifi-hal-qcom",
+}
+
+cc_library {
+    name: "google_wifi_firmware_config_version_c_wrapper",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "leveldb",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libOpenSLES",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libarcbridge",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libarcbridgeservice",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libarcdiskquota",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libarcvolume",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libartpalette-system",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libcppcose_rkp",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libcts_jni",
+    host_supported: true,
+    vendor_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libfuse",
+    host_supported: true,
+    vendor_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libgmock_ndk",
+    host_supported: true,
+    vendor_available: true,
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libhbm_minigbm",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libkeymaster_messages",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libkeymaster_portable",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libmojo",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libpdx_servicefs",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libqemupipe.ranchu",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libservicefs",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libsonic",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libwifi-hal-bcm",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libwifi-hal-mrvl",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libwifi-hal-rtk",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libwifi-hal-slsi",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libwifi-hal-syna",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libwilhelm",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "cronet_aml_components_cronet_android_cronet",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "arc_services_aidl",
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_headers {
+    name: "libberberis_guest_abi_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_headers {
+    name: "libberberis_guest_os_primitives_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_headers {
+    name: "libberberis_guest_state_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_headers {
+    name: "libberberis_proxy_loader_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_headers {
+    name: "libberberis_runtime_primitives_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_headers {
+    name: "libc_musl_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
+rust_library {
+    name: "libselinux_bindgen",
+    crate_name: "selinux_bindgen",
+    host_supported: true,
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "libzip",
+    crate_name: "zip",
+    host_supported: true,
+    srcs: ["Empty.rs"],
+}
+
+cc_library {
+    name: "libgatekeeper",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    stl: "none",
+    system_shared_libs: [],
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libgtest_ndk_c++",
+    sdk_version: "9",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libgtest_main_ndk_c++",
+    sdk_version: "9",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library {
+    name: "libRS",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    stl: "none",
+    system_shared_libs: [],
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_library {
+    name: "TextClassifierCoverageLib",
+    host_supported: true,
+    srcs: ["Empty.java"],
+    installable: true,
+}
+
+java_library {
+    name: "CtsNetTestsNonUpdatableLib",
+    host_supported: true,
+    srcs: ["Empty.java"],
+    installable: true,
+}
+
+rust_library {
+    name: "liblibfuzzer_sys",
+    host_supported: true,
+    crate_name: "libfuzzer_sys",
+    srcs: ["Empty.rs"],
+}
+
+cc_library {
+    name: "libdt_socket",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "31",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libjdwp",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "31",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libnpt",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "31",
+    srcs: ["Empty.c"],
+}
+
+cc_binary {
+    name: "ethtool",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "30",
+    srcs: ["Empty.c"],
+}
+
+cc_binary_host {
+    name: "make_f2fs",
+    srcs: ["Empty.c"],
+}
+
+cc_binary_host {
+    name: "sload_f2fs",
+    srcs: ["Empty.c"],
+}
+
+cc_binary_host {
+    name: "sefcontext_compile",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "profile-proto-def",
+    srcs: ["Empty.proto"],
+}
+
+filegroup {
+    name: "libtombstone_proto-src",
+    srcs: ["Empty.proto"],
+}
+
+filegroup {
+    name: "debian.mime.types.minimized",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "gcc.lib",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "gcc.lib32",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "gcc.lib64",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "gcc.sysroot",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "platform_privapp_allowlist_com.android.cellbroadcastservice.xml",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "privapp_allowlist_com.android.cellbroadcastservice.xml",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "cronet_javatests_resources",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "cts-dalvik-device-test-runner",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "com.android.cts.helpers.aosp",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "platform-test-screenshot-rules",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "bpfLoadTpProg.o",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "android_audio_base_header_file",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "httpclient_api_sources",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "StagedInstallTestApexV2",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "StagedInstallTestApexV2_WrongSha",
+    srcs: ["Empty.c"],
+}
+
+android_app {
+    name: "TestAppAv1",
+    sdk_version: "current",
+    srcs: ["Empty.java"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+android_app {
+    name: "TestAppAv2",
+    sdk_version: "current",
+    srcs: ["Empty.java"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+android_app {
+    name: "TestAppACrashingV2",
+    sdk_version: "current",
+    srcs: ["Empty.java"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+filegroup {
+    name: "test1_com.android.tzdata",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "GoogleFontDancingScript",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "development_docs",
+    srcs: ["Empty.txt"],
+}
+
+filegroup {
+    name: "CtsProviderTestUtils",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "CtsHostsideTestsAppSecurityUtil",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "libvtswidevine-arm-prebuilts",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "libvtswidevine-arm64-prebuilts",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "libvtswidevine-x86-prebuilts",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "libvtswidevine-x86_64-prebuilts",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "trusty_tipc_fuzzer",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "gatekeeper_aidl",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "logd_aidl",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "storaged_aidl",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "gsiservice_aidl",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "android.car-stubs-docs",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "android.car-system-stubs-docs",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "framework-bluetooth-sources",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "i18n.module.intra.core.api",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "i18n.module.public.api",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "apksigner",
+    srcs: ["Empty.sh"],
+}
+
+cc_defaults {
+    name: "non-d",
+}
+
+filegroup {
+    name: "BluetoothPacketSources",
+    srcs: ["Empty.c"],
+}
+
+prebuilt_etc {
+    name: "target-cacert-wifi-21125ccd.0",
+    src: "Empty.txt",
+}
+
+prebuilt_etc {
+    name: "target-cacert-wifi-674b5f5b.0",
+    src: "Empty.txt",
+}
+
+prebuilt_etc {
+    name: "target-cacert-wifi-ea93cb5b.0",
+    src: "Empty.txt",
+}
+
+filegroup {
+    name: "com.android.adservices.ondevicepersonalization",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.btservices",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.car.framework",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.cellbroadcast",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.compos",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.nfcservices",
+    srcs: ["Empty.c"],
+}
+
+
+filegroup {
+    name: "com.android.remoteauth",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.virt",
+    srcs: ["Empty.c"],
+}
+
+java_api_contribution {
+    name: "conscrypt.module.public.api.stubs.source.api.contribution",
+    api_surface: "public",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "conscrypt.module.public.api.stubs.source.system.api.contribution",
+    api_surface: "system",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "conscrypt.module.public.api.stubs.source.module_lib.api.contribution",
+    api_surface: "module-lib",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_library {
+    name: "conscrypt.module.public.api",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.exportable",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.intra.core.api",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs.exportable",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_api_contribution {
+    name: "conscrypt.module.platform.api.stubs.source.api.contribution",
+    api_surface: "core_platform",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.source",
+    visibility: ["//visibility:public"],
+    sdk_version: "none",
+    system_modules: "none",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.source.system",
+    visibility: ["//visibility:public"],
+    sdk_version: "none",
+    system_modules: "none",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.source.module_lib",
+    visibility: ["//visibility:public"],
+    sdk_version: "none",
+    system_modules: "none",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs.source",
+    visibility: ["//visibility:public"],
+    sdk_version: "none",
+    system_modules: "none",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.exportable.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.public.api.stubs.exportable.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.public.api.impl",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs.exportable.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.stubs.exportable.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "conscrypt.module.platform.api.impl",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+
+
+
