@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+package ecc;
+
+option java_package = "com.android.phone.ecc";
+option java_outer_classname = "ProtobufEccData";
+
+message EccInfo {
+    enum Type {
+        TYPE_UNSPECIFIED = 0;
+        POLICE = 1;
+        AMBULANCE = 2;
+        FIRE = 3;
+        MARINE_GUARD = 4;
+        MOUNTAIN_RESCUE = 5;
+        MIEC = 6;
+        AIEC = 7;
+    }
+
+    enum Routing {
+        UNKNOWN = 0;
+        EMERGENCY = 1;
+        NORMAL = 2;
+    }
+
+    optional string phone_number = 1;
+    repeated Type types = 2 [packed=true];
+    optional Routing routing = 3 [default = UNKNOWN];
+    repeated string normal_routing_mncs = 4;
+}
+
+message CountryInfo {
+    optional string iso_code = 1;
+    repeated EccInfo eccs = 2;
+    optional string ecc_fallback = 3;
+    optional bool ignore_modem_config = 4 [default = false];
+}
+
+message AllInfo {
+    optional int32 revision = 1;
+    repeated CountryInfo countries = 2;
+}
