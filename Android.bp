@@ -3140,6 +3140,35 @@ cc_library_static {
 }
 
 
+cc_library_static {
+    name: "libbluetooth-types",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_static {
+    name: "libbluetooth_hci_pdl",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
 
 cc_library_static {
     name: "libjpeg_static_ndk",
@@ -3492,6 +3521,11 @@ java_sdk_library_import {
     ],
 }
 
+java_library {
+    name: "bluetooth-test-util-lib",
+    host_supported: true,
+    srcs: ["Empty.java"],
+}
 
 java_library {
     name: "exoplayer-media_apex",
@@ -4487,6 +4521,10 @@ droidstubs {
     },
 }
 
+filegroup {
+    name: "framework-bluetooth-sources",
+    srcs: ["Empty.java"],
+}
 
 filegroup {
     name: "framework-mediaprovider-sources",
@@ -4498,6 +4536,10 @@ cc_defaults {
     name: "non-d",
 }
 
+filegroup {
+    name: "BluetoothPacketSources",
+    srcs: ["Empty.c"],
+}
 
 prebuilt_etc {
     name: "target-cacert-wifi-21125ccd.0",
