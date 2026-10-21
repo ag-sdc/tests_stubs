@@ -26,52 +26,144 @@ java_defaults {
     name: "tradefed_errorprone_defaults",
 }
 
+cc_defaults {
+    name: "VtsHalTargetTestDefaults",
+}
+
+cc_defaults {
+    name: "keystore2_use_latest_aidl_ndk_shared",
+}
+
+cc_defaults {
+    name: "keystore2_use_latest_aidl_ndk_static",
+}
+
+cc_defaults {
+    name: "adbd_defaults",
+}
+
+cc_defaults {
+    name: "host_adbd_supported",
+}
+
+cc_defaults {
+    name: "aidlaudioeffectservice_defaults",
+}
+
+cc_defaults {
+    name: "android.hardware.audio@7.1-impl_default",
+}
+
+cc_defaults {
+    name: "libapexd-deps",
+}
+
+
 // -----------------------------------------------------------------------------
 // Test Harness Java Libraries
 // -----------------------------------------------------------------------------
 java_library {
     name: "platform-test-annotations",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "flag-junit",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "compatibility-device-util-axt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "CtsVirtualDeviceCommonLib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "collector-helper-utilities",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "collector-device-lib-platform",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cronet_aml_api_java",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cronet_aml_java__testing",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cronet_java_tests",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library {
@@ -255,6 +347,12 @@ java_library {
 java_library {
     name: "hilt_android",
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "30",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 // -----------------------------------------------------------------------------
@@ -272,16 +370,31 @@ java_library {
 java_library {
     name: "httpclient_api",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "httpclient_impl",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "http_client_logging",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 // -----------------------------------------------------------------------------
@@ -344,81 +457,191 @@ cc_defaults {
 java_library {
     name: "flag-junit-base",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockito-target-minus-junit4",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockito-target",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockito-target-extended",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockito-kotlin2",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockwebserver",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-install-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-core-test-runner-axt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "ctstestrunner-axt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "ctstestserver",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "compatibility-common-util-devicesidelib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "guava-android-testlib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mobly-snippet-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "libnanohttpd",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "Harrier",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "SatelliteClient",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 // -----------------------------------------------------------------------------
@@ -426,52 +649,122 @@ java_library {
 // -----------------------------------------------------------------------------
 java_library {
     name: "flickerlib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "flickerlib-apphelpers",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "flickerlib-helpers",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "app-helpers-core",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "common-platform-scenarios",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "platform-test-composers",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "platform-test-rules",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "microbenchmark-device-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "longevity-device-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "subsampling-scale-image-view",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 // -----------------------------------------------------------------------------
@@ -479,27 +772,62 @@ java_library {
 // -----------------------------------------------------------------------------
 java_library {
     name: "cuckoofilter",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "glide-prebuilt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "glide-gifdecoder-prebuilt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "glide-disklrucache-prebuilt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "glide-annotation-and-compiler-prebuilt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_plugin {
@@ -512,47 +840,110 @@ java_plugin {
 // -----------------------------------------------------------------------------
 java_library {
     name: "apache-xml-tests",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockftpserver",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "nist-pkix-tests",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "sqlite-jdbc",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockito-target-extended-minus-junit4",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "launcher-helper-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "launcher-aosp-tapl",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "android.car-stubs",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "platform-screenshot-diff-core",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 // -----------------------------------------------------------------------------
@@ -560,62 +951,146 @@ java_library {
 // -----------------------------------------------------------------------------
 java_library {
     name: "Nene",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "junitxml",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-wm-util",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "commands-helper",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "TestApp",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-rollback-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "platform-test-options",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "platform-parametric-runner-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "compatibility-device-preconditions",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "mockito-target-inline-minus-junit4",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "sts-device-util",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "CtsAccessibilityCommon",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library {
@@ -641,117 +1116,278 @@ cc_library {
 
 java_library {
     name: "collector-device-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "uiautomator-helpers",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "CtsAppSearchTestUtils",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "rappor-tests",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "device-time-shell-utils",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "print-test-util-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "flickerlib-parsers",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "metrics-helper-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "settings-helper",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "sysui-helper",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "timeresult-helper-lib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-companion-common",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-companion-uicommon",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "TestParameterInjector",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "hilt_android_testing",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "glide-integration-recyclerview-prebuilt",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "cts-install-lib-java",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "compatibility-device-util-axt-minus-dexmaker",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "ScreenshotComposeUtilsLib",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "app-helpers-handheld-interfaces",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "health-testing-utils",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "common-platform-scenario-tests",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "handheld-app-helpers",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library {
@@ -769,7 +1405,14 @@ cc_defaults {
 }
 java_library {
     name: "xmp_toolkit",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library_host {
@@ -786,6 +1429,14 @@ cc_library {
 cc_binary {
     name: "fsverity_multilib",
     compile_multilib: "both",
+    multilib: {
+        lib32: {
+            suffix: "32",
+        },
+        lib64: {
+            suffix: "64",
+        },
+    },
 }
 
 cc_library {
@@ -894,74 +1545,137 @@ cc_library_shared {
 // are libcodec2_soft_* / libstagefright codecs / goldfish C2 / voip JNI (all static_libs).
 cc_library_static {
     name: "libdav1d",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libgav1",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libhevcdec",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libhevcenc",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libavcdec",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libavcenc",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libmpeg2dec",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libgsm",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 cc_library_static {
     name: "libogg",
+    srcs: ["Empty.c"],
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.media.swcodec",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 // external/XNNPACK + external/pthreadpool are dropped from the framework-only tree (no shadows yet);
@@ -1007,22 +1721,50 @@ cc_library_shared {
 // -----------------------------------------------------------------------------
 java_library {
     name: "nativetesthelper",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "okhttp-nojarjar",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "okhttp-tests-nojarjar",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "okhttp-for-host",
+    srcs: ["Empty.java"],
     host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_test {
@@ -1249,6 +1991,7 @@ rust_library_rlib {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1262,6 +2005,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1275,6 +2019,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1288,6 +2033,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1301,6 +2047,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1314,6 +2061,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1327,6 +2075,7 @@ rust_library_rlib {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1340,6 +2089,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1353,6 +2103,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1366,6 +2117,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1379,6 +2131,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1392,6 +2145,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1405,6 +2159,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1418,6 +2173,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1431,6 +2187,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1444,6 +2201,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1457,6 +2215,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1470,6 +2229,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1483,6 +2243,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1496,6 +2257,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1509,6 +2271,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1522,6 +2285,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1535,6 +2299,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1548,6 +2313,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1561,6 +2327,7 @@ rust_library_rlib {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1574,6 +2341,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1587,6 +2355,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1600,6 +2369,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1613,6 +2383,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1626,6 +2397,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1639,6 +2411,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1652,6 +2425,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1665,6 +2439,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1678,6 +2453,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1691,6 +2467,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1704,6 +2481,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1717,6 +2495,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1730,6 +2509,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1743,6 +2523,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1756,6 +2537,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1769,6 +2551,7 @@ rust_library_rlib {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1782,6 +2565,7 @@ rust_library_rlib {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1795,6 +2579,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1808,6 +2593,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1821,6 +2607,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1834,6 +2621,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1847,6 +2635,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1860,6 +2649,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1873,6 +2663,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1886,6 +2677,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1899,6 +2691,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1912,6 +2705,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1925,6 +2719,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1946,6 +2741,7 @@ rust_ffi_static {
     recovery_available: true,
     ramdisk_available: true,
     vendor_ramdisk_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1966,6 +2762,7 @@ cc_library_headers {
     product_available: true,
     recovery_available: true,
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1979,6 +2776,7 @@ cc_library_headers {
     product_available: true,
     recovery_available: true,
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -1992,6 +2790,7 @@ cc_library_headers {
     product_available: true,
     recovery_available: true,
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2005,6 +2804,7 @@ cc_library_headers {
     product_available: true,
     recovery_available: true,
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2019,6 +2819,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2034,6 +2835,7 @@ cc_library_static {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2048,6 +2850,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2062,6 +2865,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2076,6 +2880,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2090,6 +2895,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2104,6 +2910,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2118,6 +2925,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2132,6 +2940,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2146,6 +2955,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2161,6 +2971,7 @@ cc_library_static {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2199,6 +3010,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2213,6 +3025,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2227,6 +3040,7 @@ cc_library_shared {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2241,6 +3055,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2255,6 +3070,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2269,6 +3085,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2283,6 +3100,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2297,62 +3115,14 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
     ],
 }
 
-cc_library_static {
-    name: "libapf",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    sdk_version: "29",
-    stl: "none",
-    system_shared_libs: [],
-    srcs: ["Empty.c"],
-    export_include_dirs: ["include"],
-    apex_available: [
-        "//apex_available:platform",
-        "//apex_available:anyapex",
-    ],
-}
 
-cc_library_static {
-    name: "libapf_v5",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    sdk_version: "29",
-    stl: "none",
-    system_shared_libs: [],
-    srcs: ["Empty.c"],
-    export_include_dirs: ["include"],
-    apex_available: [
-        "//apex_available:platform",
-        "//apex_available:anyapex",
-    ],
-}
-
-cc_library_static {
-    name: "libapfdisassembler",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    sdk_version: "29",
-    stl: "none",
-    system_shared_libs: [],
-    srcs: ["Empty.c"],
-    export_include_dirs: ["include"],
-    apex_available: [
-        "//apex_available:platform",
-        "//apex_available:anyapex",
-    ],
-}
 
 cc_library_static {
     name: "libbrotli",
@@ -2362,6 +3132,7 @@ cc_library_static {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2377,6 +3148,7 @@ cc_library_static {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2391,6 +3163,7 @@ cc_library_static {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2406,6 +3179,7 @@ cc_library_static {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2422,6 +3196,7 @@ cc_library_shared {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2436,6 +3211,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2450,6 +3226,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2464,6 +3241,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2478,6 +3256,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2492,6 +3271,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2506,6 +3286,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2520,6 +3301,7 @@ cc_library {
     recovery_available: true,
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2535,6 +3317,7 @@ cc_binary {
     stl: "none",
     system_shared_libs: [],
     srcs: ["Empty.c"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2623,7 +3406,12 @@ java_library {
     name: "truth",
     host_supported: true,
     sdk_version: "core_current",
+    min_sdk_version: "28",
     srcs: ["Empty.java"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library_host {
@@ -2648,19 +3436,27 @@ java_library_host {
 
 java_library {
     name: "testng",
-    host_supported: true,
     srcs: ["Empty.java"],
+    host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "hamcrest",
     host_supported: true,
+    sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
 
 java_library {
     name: "hamcrest-library",
     host_supported: true,
+    sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
 
@@ -2682,12 +3478,47 @@ java_library_host {
 java_library {
     name: "jsr330",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
     srcs: ["Empty.java"],
 }
 
-java_library {
+java_sdk_library_import {
     name: "framework-bluetooth",
-    srcs: ["Empty.java"],
+    shared_library: false,
+    compile_dex: true,
+    public: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.btservices",
+    ],
 }
 
 java_library {
@@ -2699,6 +3530,11 @@ java_library {
 java_library {
     name: "exoplayer-media_apex",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
     srcs: ["Empty.java"],
 }
 
@@ -2710,29 +3546,59 @@ android_library {
 android_library {
     name: "mobile_data_downloader_lib",
     srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 android_library {
     name: "android_downloader_lib",
     srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "apache-velocity-engine-core",
     host_supported: true,
     srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "nist-sip",
     host_supported: true,
     srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
     name: "owasp-java-encoder",
     host_supported: true,
     srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
 }
 
 java_library {
@@ -2756,12 +3622,22 @@ java_library {
 java_library {
     name: "libicing-java",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
     srcs: ["Empty.java"],
 }
 
 java_library {
     name: "icing-java-proto-lite",
     host_supported: true,
+    sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
     srcs: ["Empty.java"],
 }
 
@@ -2802,6 +3678,7 @@ cc_library {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -2837,6 +3714,7 @@ rust_library {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -3017,6 +3895,7 @@ cc_library {
     recovery_available: true,
     sdk_version: "current",
     stl: "c++_static",
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -3063,6 +3942,13 @@ cc_library {
     name: "libartpalette-system",
     host_supported: true,
     vendor_available: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "com.android.art",
+        "com.android.art.debug",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
     srcs: ["Empty.c"],
 }
 
@@ -3277,6 +4163,7 @@ cc_library {
     system_shared_libs: [],
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -3289,6 +4176,7 @@ cc_library_static {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -3301,6 +4189,7 @@ cc_library_static {
     stl: "c++_static",
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -3317,6 +4206,7 @@ cc_library {
     system_shared_libs: [],
     srcs: ["Empty.c"],
     export_include_dirs: ["include"],
+    min_sdk_version: "29",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -3605,14 +4495,30 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-filegroup {
+droidstubs {
     name: "android.car-stubs-docs",
     srcs: ["Empty.java"],
+    sdk_version: "none",
+    system_modules: "none",
+    check_api: {
+        current: {
+            api_file: "Empty.txt",
+            removed_api_file: "Empty.txt",
+        },
+    },
 }
 
-filegroup {
+droidstubs {
     name: "android.car-system-stubs-docs",
     srcs: ["Empty.java"],
+    sdk_version: "none",
+    system_modules: "none",
+    check_api: {
+        current: {
+            api_file: "Empty.txt",
+            removed_api_file: "Empty.txt",
+        },
+    },
 }
 
 filegroup {
@@ -3621,19 +4527,10 @@ filegroup {
 }
 
 filegroup {
-    name: "i18n.module.intra.core.api",
+    name: "framework-mediaprovider-sources",
     srcs: ["Empty.java"],
 }
 
-filegroup {
-    name: "i18n.module.public.api",
-    srcs: ["Empty.java"],
-}
-
-filegroup {
-    name: "apksigner",
-    srcs: ["Empty.sh"],
-}
 
 cc_defaults {
     name: "non-d",
@@ -3664,9 +4561,19 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-filegroup {
+prebuilt_apex {
     name: "com.android.btservices",
-    srcs: ["Empty.c"],
+    apex_name: "com.android.btservices",
+    source_apex_name: "com.android.btservices",
+    src: "Empty.apex",
+    filename: "com.android.btservices.apex",
+    exported_bootclasspath_fragments: ["com.android.btservices-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.btservices-systemserverclasspath-fragment"],
+    exported_java_libs: [
+        "framework-bluetooth",
+        "service-bluetooth",
+    ],
+    prefer: true,
 }
 
 filegroup {
@@ -3676,11 +4583,6 @@ filegroup {
 
 filegroup {
     name: "com.android.cellbroadcast",
-    srcs: ["Empty.c"],
-}
-
-filegroup {
-    name: "com.android.compos",
     srcs: ["Empty.c"],
 }
 
@@ -3695,9 +4597,42 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-filegroup {
+prebuilt_apex {
     name: "com.android.virt",
-    srcs: ["Empty.c"],
+    apex_name: "com.android.virt",
+    source_apex_name: "com.android.virt",
+    src: "Empty.apex",
+    filename: "com.android.virt.apex",
+    exported_bootclasspath_fragments: ["com.android.virt-bootclasspath-fragment"],
+    exported_java_libs: ["framework-virtualization"],
+    prefer: true,
+}
+
+prebuilt_apex {
+    name: "com.android.neuralnetworks",
+    apex_name: "com.android.neuralnetworks",
+    source_apex_name: "com.android.neuralnetworks",
+    src: "Empty.apex",
+    filename: "com.android.neuralnetworks.apex",
+    prefer: true,
+}
+
+prebuilt_apex {
+    name: "test_com.android.neuralnetworks",
+    apex_name: "test_com.android.neuralnetworks",
+    source_apex_name: "test_com.android.neuralnetworks",
+    src: "Empty.apex",
+    filename: "test_com.android.neuralnetworks.apex",
+    prefer: true,
+}
+
+prebuilt_apex {
+    name: "com.android.resolv",
+    apex_name: "com.android.resolv",
+    source_apex_name: "com.android.resolv",
+    src: "Empty.apex",
+    filename: "com.android.resolv.apex",
+    prefer: true,
 }
 
 java_api_contribution {
@@ -3721,44 +4656,62 @@ java_api_contribution {
     visibility: ["//visibility:public"],
 }
 
-java_library {
+java_sdk_library_import {
     name: "conscrypt.module.public.api",
-    visibility: ["//visibility:public"],
-    installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    shared_library: false,
+    public: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    prefer: true,
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.system",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.module_lib",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.exportable",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
@@ -3836,24 +4789,21 @@ java_library {
     name: "conscrypt.module.public.api.stubs.exportable.system",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.exportable.module_lib",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
     name: "conscrypt.module.public.api.impl",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
 }
 
 java_library {
@@ -3895,6 +4845,497 @@ java_library {
     sdk_version: "none",
     system_modules: "none",
 }
+java_import {
+    name: "framework-virtualization",
+    jars: ["Empty.jar"],
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.virt",
+    ],
+}
+
+prebuilt_bootclasspath_fragment {
+    name: "com.android.btservices-bootclasspath-fragment",
+    contents: ["framework-bluetooth"],
+    apex_available: ["com.android.btservices"],
+    hidden_api: {
+        annotation_flags: "Empty.csv",
+        metadata: "Empty.csv",
+        index: "Empty.csv",
+        signature_patterns: "Empty.csv",
+        filtered_stub_flags: "Empty.csv",
+        filtered_flags: "Empty.csv",
+    },
+    prefer: true,
+}
+
+prebuilt_bootclasspath_fragment {
+    name: "com.android.conscrypt-bootclasspath-fragment",
+    contents: ["conscrypt"],
+    apex_available: ["com.android.conscrypt"],
+    hidden_api: {
+        annotation_flags: "Empty.csv",
+        metadata: "Empty.csv",
+        index: "Empty.csv",
+        signature_patterns: "Empty.csv",
+        filtered_stub_flags: "Empty.csv",
+        filtered_flags: "Empty.csv",
+    },
+    prefer: true,
+}
+
+prebuilt_bootclasspath_fragment {
+    name: "i18n-bootclasspath-fragment",
+    contents: ["core-icu4j"],
+    apex_available: ["com.android.i18n"],
+    hidden_api: {
+        annotation_flags: "Empty.csv",
+        metadata: "Empty.csv",
+        index: "Empty.csv",
+        signature_patterns: "Empty.csv",
+        filtered_stub_flags: "Empty.csv",
+        filtered_flags: "Empty.csv",
+    },
+    prefer: true,
+}
+
+prebuilt_bootclasspath_fragment {
+    name: "com.android.virt-bootclasspath-fragment",
+    contents: ["framework-virtualization"],
+    apex_available: ["com.android.virt"],
+    hidden_api: {
+        annotation_flags: "Empty.csv",
+        metadata: "Empty.csv",
+        index: "Empty.csv",
+        signature_patterns: "Empty.csv",
+        filtered_stub_flags: "Empty.csv",
+        filtered_flags: "Empty.csv",
+    },
+    prefer: true,
+}
+
+java_import {
+    name: "service-bluetooth",
+    jars: ["Empty.jar"],
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.btservices",
+    ],
+}
+
+prebuilt_systemserverclasspath_fragment {
+    name: "com.android.btservices-systemserverclasspath-fragment",
+    standalone_contents: ["service-bluetooth"],
+    apex_available: ["com.android.btservices"],
+    prefer: true,
+}
+
+java_library {
+    name: "ota_metadata_proto_java",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+cc_library {
+    name: "libapexsupport",
+    double_loadable: true,
+    vendor_available: true,
+    recovery_available: true,
+    llndk: {
+        symbol_file: "libapexsupport.map.txt",
+        unversioned: true,
+    },
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libnetd_test_tun_interface",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libapf",
+    host_supported: true,
+    sdk_version: "30",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libapf_v5",
+    host_supported: true,
+    sdk_version: "30",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libapfdisassembler",
+    host_supported: true,
+    sdk_version: "30",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libhidl-gen-hash",
+    host_supported: true,
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "android.hardware.sensors@1.0-convert",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "android.hardware.tests.inheritance@1.0",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "android.hardware.health@1.0-convert",
+    vendor_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libtestUtil",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libstagefright_aidl_bufferpool2",
+    double_loadable: true,
+    vendor_available: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media.swcodec",
+    ],
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "android.hardware.audio.common-util",
+    host_supported: true,
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "android.hardware.camera.common-helper",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "android.hardware.camera.common@1.0-helper",
+    vendor_available: true,
+    whole_static_libs: ["android.hardware.camera.common-helper"],
+}
+
+cc_library {
+    name: "libaudiopolicyengine_config",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+    srcs: ["Empty.c"],
+}
+
+java_library {
+    name: "ecc-protos-lite",
+    proto: {
+        type: "nano",
+    },
+    srcs: ["protobuf_ecc_data.proto"],
+    sdk_version: "core_current",
+}
+
+java_library {
+    name: "SlicePurchaseController",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "Settings-robo-testutils",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v1_prebuilt",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_different_certificate_prebuilt",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_unsigned_apk_container_prebuilt",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_rebootless_prebuilt",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "apex.test",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "apex.apexd_test_classpath",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test.rebootless_apex_v1",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test.rebootless_apex_v2",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "apex.apexd_test",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.media",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.media.swcodec",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "PackageManagerTestApex",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "PackageManagerTestApexApp",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.mediaprovider",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.adbd",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.conscrypt",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v1",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_add_apk_to_apex",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_apk_in_apex_sdk_target_p",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_apk_in_apex_upgrades",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_legacy",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_no_hashtree",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_sdk_target_p",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v2_unsigned_payload",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.apex.cts.shim.v3",
+    srcs: ["Empty.c"],
+}
+
+sh_binary_host {
+    name: "deapexer",
+    src: "Empty.sh",
+}
+
+cc_defaults {
+    name: "neuralnetworks_defaults",
+}
+
+cc_defaults {
+    name: "neuralnetworks_utils_defaults",
+}
+
+cc_defaults {
+    name: "resolv_test_defaults",
+}
+
+cc_library_static {
+    name: "neuralnetworks_types",
+    host_supported: true,
+    vendor_available: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_library {
+    name: "dnsresolver_aidl_interface-V14-java",
+    srcs: ["Empty.java"],
+    host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_headers {
+    name: "dnsproxyd_protocol_headers",
+    export_include_dirs: ["include/dnsproxyd_protocol"],
+    host_supported: true,
+    vendor_available: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+// Stubs for undefined dependencies referenced by prebuilts/target/framework/*
+cc_library_static {
+    name: "float_from_i32",
+    host_supported: true,
+    srcs: ["Empty.c"],
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_library_headers {
+    name: "libaudioaidl_headers",
+    host_supported: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_library_host {
+    name: "frameworks-base-hostutils",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "testables",
+    srcs: ["Empty.java"],
+    host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_library {
+    name: "frameworks-base-testutils",
+    srcs: ["Empty.java"],
+    host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_library {
+    name: "platform-compat-test-rules",
+    srcs: ["Empty.java"],
+    host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_library {
+    name: "BlobStoreTestUtils",
+    srcs: ["Empty.java"],
+    host_supported: true,
+    sdk_version: "core_current",
+    min_sdk_version: "28",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
 
 
 
