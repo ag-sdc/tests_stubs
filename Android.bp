@@ -5219,6 +5219,11 @@ sh_binary_host {
     src: "Empty.sh",
 }
 
+sh_binary_host {
+    name: "switcher4",
+    src: "Empty.sh",
+}
+
 cc_defaults {
     name: "neuralnetworks_defaults",
 }
