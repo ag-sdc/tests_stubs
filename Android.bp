@@ -4587,6 +4587,11 @@ filegroup {
 }
 
 filegroup {
+    name: "com.android.compos",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
     name: "com.android.nfcservices",
     srcs: ["Empty.c"],
 }
