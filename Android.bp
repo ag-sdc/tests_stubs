@@ -4608,8 +4608,6 @@ prebuilt_apex {
     source_apex_name: "com.android.virt",
     src: "Empty.apex",
     filename: "com.android.virt.apex",
-    exported_bootclasspath_fragments: ["com.android.virt-bootclasspath-fragment"],
-    exported_java_libs: ["framework-virtualization"],
     prefer: true,
 }
 
@@ -4905,20 +4903,7 @@ prebuilt_bootclasspath_fragment {
     prefer: true,
 }
 
-prebuilt_bootclasspath_fragment {
-    name: "com.android.virt-bootclasspath-fragment",
-    contents: ["framework-virtualization"],
-    apex_available: ["com.android.virt"],
-    hidden_api: {
-        annotation_flags: "Empty.csv",
-        metadata: "Empty.csv",
-        index: "Empty.csv",
-        signature_patterns: "Empty.csv",
-        filtered_stub_flags: "Empty.csv",
-        filtered_flags: "Empty.csv",
-    },
-    prefer: true,
-}
+
 
 java_import {
     name: "service-bluetooth",
