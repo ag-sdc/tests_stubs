@@ -2503,6 +2503,18 @@ java_library {
 }
 
 java_library {
+    name: "framework-connectivity.stubs.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "framework-connectivity-t.stubs.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
     name: "framework-bluetooth.stubs.exportable",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
