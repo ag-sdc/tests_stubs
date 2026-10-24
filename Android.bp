@@ -4038,3 +4038,470 @@ cc_defaults {
         },
     },
 }
+
+cc_library_headers {
+    name: "libqemupipe-types.ranchu",
+    vendor_available: true,
+}
+
+cc_library_static {
+    name: "libqemupipe.ranchu",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "libc_malloc_debug_backtrace",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.runtime",
+    ],
+    srcs: ["Empty.c"],
+}
+
+cc_library_headers {
+    name: "bpf_headers",
+    host_supported: true,
+    vendor_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library_static {
+    name: "libip_checksum",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["Empty.c"],
+}
+
+rust_library {
+    name: "liblogger",
+    crate_name: "logger",
+    srcs: ["Empty.rs"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "29",
+}
+
+java_library {
+    name: "net-tests-utils",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "wifi_aconfig_flags_lib",
+    sdk_version: "core_current",
+    min_sdk_version: "S",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "net-utils-framework-common",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "net-utils-services-common",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "netd-client",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "networkstack-client",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Connectivity
+java_library {
+    name: "framework-connectivity",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity.stubs",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity.stubs.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity.stubs.exportable",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity.stubs.exportable.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity.stubs.exportable.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity.impl",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Connectivity-T
+java_library {
+    name: "framework-connectivity-t",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity-t.stubs",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity-t.stubs.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity-t.stubs.exportable",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity-t.stubs.exportable.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity-t.stubs.exportable.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-connectivity-t.impl",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Media
+java_library {
+    name: "framework-media",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.stubs",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.stubs.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.stubs.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.stubs.exportable",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.stubs.exportable.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.stubs.exportable.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-media.impl",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Tethering
+java_library {
+    name: "framework-tethering",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.stubs",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.stubs.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.stubs.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.stubs.exportable",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.stubs.exportable.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.stubs.exportable.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-tethering.impl",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Wifi
+java_library {
+    name: "framework-wifi",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.stubs",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.stubs.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.stubs.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.stubs.exportable",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.stubs.exportable.system",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.stubs.exportable.module_lib",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "framework-wifi.impl",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Service Media S
+java_library {
+    name: "service-media-s.stubs.system_server",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+java_library {
+    name: "service-media-s.stubs.exportable.system_server",
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+// Heapprofd client api
+cc_library_shared {
+    name: "heapprofd_client_api",
+    srcs: ["Empty.c"],
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+// CTS test stubs
+java_library {
+    name: "cts-net-utils",
+    srcs: ["Empty.java"],
+    sdk_version: "test_current",
+}
+
+// Camera device impl shims
+cc_library_shared {
+    name: "camera.device@1.0-impl",
+    srcs: ["Empty.c"],
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "camera.device@3.2-impl",
+    srcs: ["Empty.c"],
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "camera.device@3.3-impl",
+    srcs: ["Empty.c"],
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "camera.device@3.4-impl",
+    srcs: ["Empty.c"],
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "camera.device@3.5-impl",
+    srcs: ["Empty.c"],
+    vendor_available: true,
+}
+
+// Connectivity Tiramisu pre-jarjar
+java_library {
+    name: "service-connectivity-tiramisu-pre-jarjar",
+    srcs: ["Empty.java"],
+    sdk_version: "core_platform",
+}
+
+// Goldfish OpenGL stubs
+cc_library_static {
+    name: "libGoldfishAddressSpace",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_shared {
+    name: "libGLESv1_enc",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_shared {
+    name: "lib_renderControl_enc",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_shared {
+    name: "libOpenglCodecCommon",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_shared {
+    name: "libOpenglSystemCommon",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+// Goldfish sensor and audio HAL dependencies
+cc_library_headers {
+    name: "android.hardware.sensors@2.X-multihal.header",
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "android.hardware.sensors@2.0-ScopedWakelock",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_shared {
+    name: "android.hardware.audio@7.0-util",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_shared {
+    name: "android.hardware.audio.common@7.0-util",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+// Goldfish gralloc cb header
+cc_library_headers {
+    name: "libgralloc_cb.ranchu",
+    vendor_available: true,
+}
+
+// Goldfish codec2 libplatform stub
+cc_library_static {
+    name: "libplatform",
+    vendor_available: true,
+    srcs: ["Empty.c"],
+}
+
+// Seccomp policy stub
+cc_library_static {
+    name: "libseccomp_policy",
+    vendor_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    srcs: ["seccomp_policy.c"],
+}
+
+// Media APEX JNI stub
+cc_library_shared {
+    name: "libmediaparser-jni",
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+    ],
+}
+
+// Atest prebuilt stub
+filegroup {
+    name: "atest-py3-prebuilt",
+    srcs: ["Empty.c"],
+}
+
+// GsiService AIDL filegroup
+filegroup {
+    name: "gsiservice_aidl",
+    srcs: [
+        "aidl/android/gsi/AvbPublicKey.aidl",
+        "aidl/android/gsi/GsiProgress.aidl",
+        "aidl/android/gsi/IGsiService.aidl",
+        "aidl/android/gsi/IGsiServiceCallback.aidl",
+        "aidl/android/gsi/IImageService.aidl",
+        "aidl/android/gsi/IProgressCallback.aidl",
+        "aidl/android/gsi/MappedImage.aidl",
+    ],
+    path: "aidl",
+}
