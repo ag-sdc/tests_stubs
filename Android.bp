@@ -4531,3 +4531,41 @@ java_library_host {
     name: "jsilver",
     srcs: ["Empty.java"],
 }
+
+java_library {
+    name: "stub-annotations",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "hamcrest",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "hamcrest-library",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "testng",
+    srcs: ["Empty.java"],
+}
+
+java_library {
+    name: "truth",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "junit-host",
+    srcs: ["Empty.java"],
+}
