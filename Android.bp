@@ -4586,11 +4586,6 @@ java_library_host {
 }
 
 java_library_host {
-    name: "cts-tradefed",
-    srcs: ["Empty.java"],
-}
-
-java_library_host {
     name: "metalava-signature-reader",
     srcs: ["Empty.java"],
 }
