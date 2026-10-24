@@ -4505,3 +4505,29 @@ filegroup {
     ],
     path: "aidl",
 }
+
+cc_library_headers {
+    name: "libgtest_prod_headers",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+}
+
+java_library {
+    name: "junit",
+    host_supported: true,
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "doclava",
+    srcs: ["Empty.java"],
+}
+
+java_library_host {
+    name: "jsilver",
+    srcs: ["Empty.java"],
+}
