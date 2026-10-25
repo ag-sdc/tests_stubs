@@ -3737,6 +3737,32 @@ sh_binary_host {
     src: "Empty.sh",
 }
 
+sh_binary_host {
+    name: "cxxbridge",
+    src: "Empty.sh",
+}
+
+sh_binary_host {
+    name: "metalava",
+    src: "Empty.sh",
+}
+
+sh_binary_host {
+    name: "dexdump",
+    src: "Empty.sh",
+}
+
+sh_binary_host {
+    name: "avbtool",
+    src: "Empty.sh",
+}
+
+sh_binary_host {
+    name: "mkbootimg",
+    src: "Empty.sh",
+}
+
+
 cc_defaults {
     name: "neuralnetworks_defaults",
 }
@@ -4252,10 +4278,10 @@ java_library {
 }
 
 // Tethering
-java_library {
+java_import {
     name: "framework-tethering",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["Empty.jar"],
+    prefer: true,
 }
 java_library {
     name: "framework-tethering.stubs",
@@ -4294,10 +4320,10 @@ java_library {
 }
 
 // Wifi
-java_library {
+java_import {
     name: "framework-wifi",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["Empty.jar"],
+    prefer: true,
 }
 java_library {
     name: "framework-wifi.stubs",
@@ -5004,6 +5030,7 @@ cc_library {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
+    double_loadable: true,
     apex_available: [
         "//apex_available:anyapex",
         "//apex_available:platform",
@@ -5017,6 +5044,7 @@ cc_library {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
+    double_loadable: true,
     apex_available: [
         "//apex_available:anyapex",
         "//apex_available:platform",
@@ -5101,3 +5129,531 @@ droiddoc_exported_dir {
 }
 
 
+
+java_library {
+    name: "art.module.public.api.stubs",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.intra.core.api.stubs",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art-module-intra-core-api-stubs-system-modules-lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "core-lambda-stubs-for-system-modules",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.api.annotations.for.system.modules",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "core-all",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+    static_libs: ["core-oj", "core-libart"],
+}
+
+java_system_modules {
+    name: "core-all-system-modules",
+    visibility: ["//visibility:public"],
+    libs: ["core-all"],
+}
+
+java_library_host {
+    name: "core-xml-for-host",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "art.module.public.api.stubs.source.api.contribution",
+    api_surface: "public",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "art.module.public.api.stubs.source.system.api.contribution",
+    api_surface: "system",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "art.module.public.api.stubs.source.module_lib.api.contribution",
+    api_surface: "module-lib",
+    api_file: "Empty.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_library {
+    name: "art.module.public.api.stubs.source",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.source.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.source.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.exportable",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.exportable.module_lib",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "art.module.public.api.stubs.exportable.system",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+cc_library {
+    name: "libnativehelper_lazy",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    srcs: ["Empty.c"],
+}
+
+java_library {
+    name: "core-generated-annotation-stubs",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_sdk_library_import {
+    name: "art.module.public.api",
+    shared_library: false,
+    public: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    prefer: true,
+}
+
+java_sdk_library_import {
+    name: "service-art",
+    shared_library: false,
+    system_server: {
+        jars: ["Empty.jar"],
+        stub_srcs: ["Empty.srcjar"],
+        current_api: "Empty.txt",
+        removed_api: "Empty.txt",
+        annotations: "Empty.txt",
+        sdk_version: "none",
+    },
+    prefer: true,
+}
+
+filegroup {
+    name: "framework-connectivity-tiramisu-updatable-sources",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "framework-nearby-sources",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "framework-tethering-srcs",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "updatable-media-srcs",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "com.android.art.debug",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.tethering",
+    srcs: ["Empty.c"],
+}
+
+
+filegroup {
+    name: "com.android.geotz",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.neuralnetworks",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.virt",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.overlaytest.overlaid",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.overlaytest.overlay",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.wifi",
+    srcs: ["Empty.c"],
+}
+
+
+filegroup {
+    name: "nfc_nci.st21nfc.default",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_broken_com.android.art",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.adbd",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.neuralnetworks",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.permission",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_com.android.wifi",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "test_jitzygote_com.android.art",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.compos",
+    srcs: ["Empty.c"],
+}
+
+prebuilt_bootclasspath_fragment {
+    name: "art-bootclasspath-fragment",
+    image_name: "art",
+    contents: [
+        "core-oj",
+        "core-libart",
+        "okhttp",
+        "bouncycastle",
+        "apache-xml",
+    ],
+    api: {
+        stub_libs: [
+            "art.module.public.api",
+        ],
+    },
+    apex_available: ["com.android.art"],
+    hidden_api: {
+        annotation_flags: "Empty.csv",
+        metadata: "Empty.csv",
+        index: "Empty.csv",
+        signature_patterns: "Empty.csv",
+        filtered_stub_flags: "Empty.csv",
+        filtered_flags: "Empty.csv",
+    },
+    prefer: true,
+}
+
+java_import {
+    name: "framework-statsd",
+    visibility: ["//visibility:public"],
+    jars: ["Empty.jar"],
+    prefer: true,
+}
+
+java_import {
+    name: "framework-statsd.stubs.module_lib",
+    visibility: ["//visibility:public"],
+    jars: ["Empty.jar"],
+    prefer: true,
+}
+
+java_import {
+    name: "framework-configinfrastructure",
+    visibility: ["//visibility:public"],
+    jars: ["Empty.jar"],
+    prefer: true,
+}
+
+cc_library {
+    name: "libstatssocket",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.c"],
+    host_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    stubs: {
+        symbol_file: "libstatssocket.map.txt",
+        versions: [
+            "30",
+            "current",
+        ],
+    },
+}
+
+cc_library {
+    name: "libstatspull",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.c"],
+    host_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    stubs: {
+        symbol_file: "libstatspull.map.txt",
+        versions: [
+            "30",
+            "current",
+        ],
+    },
+}
+
+cc_library_static {
+    name: "statsd-aidl-ndk",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.c"],
+    host_supported: true,
+}
+
+
+
+
+
+
+
+
+
+
+cc_library_headers {
+    name: "libstatssocket_headers",
+    export_include_dirs: ["."],
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library_headers {
+    name: "libstatspull_headers",
+    export_include_dirs: ["."],
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libkll",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.c"],
+    host_supported: true,
+    double_loadable: true,
+}
+
+java_library {
+    name: "service-rkp.stubs.system_server",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "service-sdksandbox.stubs.system_server",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
+java_library {
+    name: "statsdprotolite",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "statsd_internal_protos",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.proto"],
+}
+
+filegroup {
+    name: "statslog-cellbroadcast-java-gen",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "sdk-extensions-info",
+    visibility: ["//visibility:public"],
+    srcs: ["Empty.txt"],
+}
+
+filegroup {
+    name: "com.android.adservices",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.devicelock",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.extservices",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.healthfitness",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.ondevicepersonalization",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.os.statsd",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.scheduling",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.sdkext",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.uwb",
+    srcs: ["Empty.c"],
+}
+
+filegroup {
+    name: "com.android.profiling",
+    srcs: ["Empty.c"],
+}
