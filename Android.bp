@@ -3729,10 +3729,11 @@ sh_binary_host {
     src: "Empty.sh",
 }
 
-sh_binary_host {
-    name: "cxxbridge",
-    src: "Empty.sh",
-}
+// cxxbridge stub REMOVED: real cc_prebuilt_binary_host ships in the
+// prebuilts/target/external/rust/cxx shadow (@2e73bd1) - duplicate-module
+// collision (sh_binary_host stub was a placeholder for the R1 cxx shadow).
+// Genrule tools refs (libinput_cxx_bridge_code, inputflinger_rs_bootstrap_bridge_code,
+// libflags_rust_generated_cpp_bridge) resolve against the shadow binary.
 
 java_binary_host {
     name: "metalava",
@@ -4771,12 +4772,10 @@ cc_library {
     ],
 }
 
-genrule {
-    name: "cxx-bridge-header",
-    cmd: "mkdir -p $$(dirname $(out)) && touch $(out)",
-    out: ["rust/cxx.h"],
-    export_include_dirs: ["."],
-}
+// cxx-bridge-header stub REMOVED: real genrule ships in the
+// prebuilts/target/external/rust/cxx shadow (@2e73bd1) - duplicate-module
+// collision. Fleet consumers (frameworks/native/libs/input:153,213,259,
+// services/inputflinger:121) resolve against the shadow.
 
 cc_library {
     name: "libdexfile",
@@ -4853,15 +4852,10 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-rust_library {
-    name: "libcxx",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    crate_name: "cxx",
-    srcs: ["Empty.rs"],
-}
+// libcxx stub REMOVED: real libcxx rlibs ship in the
+// prebuilts/target/external/rust/cxx shadow (artifacts-only: lib/libcxx.rlib
+// device panic=abort + lib64/ host closure). No rust_library module until an
+// R2/R3 consumer wires rust_prebuilt_library against live soong.
 
 rust_library {
     name: "liblog_rust",
@@ -4883,15 +4877,10 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-rust_library {
-    name: "libflags_rust",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    crate_name: "flags_rust",
-    srcs: ["Empty.rs"],
-}
+// libflags_rust stub REMOVED: real artifacts ship in the
+// prebuilts/target/server_configurable_flags shadow (@2ee8806 -
+// lib/libflags_rust.rlib + libflags_rust_cpp_bridge.a + host lib64 rlib).
+// Artifacts-only (no rust_prebuilt_library) until an R2/R3 consumer wires it.
 
 rust_library {
     name: "liblazy_static",
