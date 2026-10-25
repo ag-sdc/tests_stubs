@@ -4683,6 +4683,16 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
+rust_library {
+    name: "liblibc",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "libc",
+    srcs: ["Empty.rs"],
+}
+
 cc_library {
     name: "libgmock_host",
     host_supported: true,
