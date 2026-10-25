@@ -4923,6 +4923,26 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
+rust_library {
+    name: "libflags_rust",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "flags_rust",
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "liblazy_static",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "lazy_static",
+    srcs: ["Empty.rs"],
+}
+
 
 
 
