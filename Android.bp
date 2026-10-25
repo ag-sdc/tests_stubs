@@ -1473,6 +1473,11 @@ cc_library {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
     srcs: ["Empty.c"],
 }
 
@@ -1482,6 +1487,11 @@ cc_library {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
+    min_sdk_version: "29",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
     srcs: ["Empty.c"],
 }
 
@@ -4821,5 +4831,43 @@ rust_library {
     crate_name: "downcast_rs",
     srcs: ["Empty.rs"],
 }
+
+cc_library {
+    name: "libnativeloader",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    srcs: ["Empty.c"],
+}
+
+rust_library {
+    name: "libtokio",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "tokio",
+    srcs: ["Empty.rs"],
+}
+
+cc_library_static {
+    name: "libgmock_ndk",
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "slicer_ndk_no_rtti",
+    sdk_version: "current",
+    stl: "c++_static",
+    srcs: ["Empty.c"],
+}
+
 
 
