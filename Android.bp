@@ -4604,7 +4604,8 @@ java_library_host {
 java_library {
     name: "stub-annotations",
     host_supported: true,
-    sdk_version: "core_current",
+    sdk_version: "none",
+    system_modules: "none",
     srcs: ["Empty.java"],
 }
 
