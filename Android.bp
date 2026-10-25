@@ -4663,3 +4663,85 @@ rust_library {
     crate_name: "zerocopy",
     srcs: ["Empty.rs"],
 }
+
+rust_library {
+    name: "libasync_trait",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "async_trait",
+    srcs: ["Empty.rs"],
+}
+
+cc_library_host {
+    name: "libgmock_host",
+    srcs: ["Empty.c"],
+}
+
+java_binary_host {
+    name: "metalava-manual",
+    srcs: ["Empty.java"],
+}
+
+cc_library {
+    name: "libopenjdkjvm",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+}
+
+cc_library {
+    name: "libopenjdkjvmd",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    srcs: ["Empty.c"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+        "com.android.art.debug",
+    ],
+}
+
+genrule {
+    name: "cxx-bridge-header",
+    cmd: "mkdir -p $$(dirname $(out)) && touch $(out)",
+    out: ["rust/cxx.h"],
+    export_include_dirs: ["."],
+}
+
+cc_library_static {
+    name: "librustc_demangle_static",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libdexfile",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library_static {
+    name: "libdexfile_support",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+}
+
