@@ -4852,10 +4852,15 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-// libcxx stub REMOVED: real libcxx rlibs ship in the
-// prebuilts/target/external/rust/cxx shadow (artifacts-only: lib/libcxx.rlib
-// device panic=abort + lib64/ host closure). No rust_library module until an
-// R2/R3 consumer wires rust_prebuilt_library against live soong.
+rust_library {
+    name: "libcxx",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "cxx",
+    srcs: ["Empty.rs"],
+}
 
 rust_library {
     name: "liblog_rust",
