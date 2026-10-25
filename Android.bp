@@ -4633,3 +4633,33 @@ filegroup {
     name: "compatibility_matrix_schema",
     srcs: ["compatibility_matrix.xsd"],
 }
+
+cc_library_headers {
+    name: "libopenjdkjvmti_headers",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    export_include_dirs: ["include"],
+}
+
+cc_library {
+    name: "slicer",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    srcs: ["Empty.c"],
+}
+
+rust_library {
+    name: "libzerocopy",
+    host_supported: true,
+    crate_name: "zerocopy",
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "libzerocopy_nostd_noalloc",
+    host_supported: true,
+    crate_name: "zerocopy",
+    srcs: ["Empty.rs"],
+}
