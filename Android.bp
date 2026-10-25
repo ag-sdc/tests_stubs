@@ -4779,10 +4779,9 @@ cc_library {
     srcs: ["Empty.c"],
 }
 
-java_binary {
+droiddoc_exported_dir {
     name: "metalava-manual",
-    host_supported: true,
-    srcs: ["Empty.java"],
+    path: ".",
 }
 
 cc_library {
