@@ -4869,5 +4869,46 @@ cc_library_static {
     srcs: ["Empty.c"],
 }
 
+rust_library {
+    name: "libbitflags",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "bitflags",
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "libcxx",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "cxx",
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "liblog_rust",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "log",
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "libnix",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "nix",
+    srcs: ["Empty.rs"],
+}
+
+
 
 
