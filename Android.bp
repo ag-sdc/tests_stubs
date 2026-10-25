@@ -4674,8 +4674,10 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-cc_library_host {
+cc_library {
     name: "libgmock_host",
+    host_supported: true,
+    device_supported: false,
     srcs: ["Empty.c"],
 }
 
