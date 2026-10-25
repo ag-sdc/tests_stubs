@@ -4816,6 +4816,8 @@ cc_library_static {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
     srcs: ["Empty.c"],
 }
 
