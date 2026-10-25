@@ -3126,19 +3126,9 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-prebuilt_apex {
+filegroup {
     name: "com.android.btservices",
-    apex_name: "com.android.btservices",
-    source_apex_name: "com.android.btservices",
-    src: "Empty.apex",
-    filename: "com.android.btservices.apex",
-    exported_bootclasspath_fragments: ["com.android.btservices-bootclasspath-fragment"],
-    exported_systemserverclasspath_fragments: ["com.android.btservices-systemserverclasspath-fragment"],
-    exported_java_libs: [
-        "framework-bluetooth",
-        "service-bluetooth",
-    ],
-    prefer: true,
+    srcs: ["Empty.c"],
 }
 
 filegroup {
@@ -3389,6 +3379,7 @@ java_import {
     ],
 }
 
+/*
 prebuilt_bootclasspath_fragment {
     name: "com.android.btservices-bootclasspath-fragment",
     contents: ["framework-bluetooth"],
@@ -3403,6 +3394,7 @@ prebuilt_bootclasspath_fragment {
     },
     prefer: true,
 }
+*/
 
 prebuilt_bootclasspath_fragment {
     name: "com.android.conscrypt-bootclasspath-fragment",
