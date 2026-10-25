@@ -5116,6 +5116,21 @@ rust_library {
     ],
 }
 
+cc_library {
+    name: "libsigchain",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    srcs: ["Empty.c"],
+}
+
+
 
 
 
