@@ -5641,3 +5641,10 @@ filegroup {
     name: "com.android.profiling",
     srcs: ["Empty.c"],
 }
+
+java_library {
+    name: "libcore-stub-for-hwbinder",
+    srcs: ["libcore/util/NativeAllocationRegistry.java"],
+    sdk_version: "core_current",
+    visibility: ["//visibility:public"],
+}
