@@ -5067,6 +5067,47 @@ rust_library {
     ],
 }
 
+cc_library {
+    name: "libnativebridge_lazy",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libnativeloader_lazy",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    srcs: ["Empty.c"],
+}
+
+rust_library {
+    name: "libcriterion",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "criterion",
+    srcs: ["Empty.rs"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+
 
 
 
