@@ -3709,11 +3709,6 @@ filegroup {
 }
 
 sh_binary_host {
-    name: "deapexer",
-    src: "Empty.sh",
-}
-
-sh_binary_host {
     name: "switcher4",
     src: "Empty.sh",
 }
@@ -3848,11 +3843,6 @@ cc_binary_host {
 
 cc_binary_host {
     name: "adb",
-    srcs: ["Empty.c"],
-}
-
-cc_binary_host {
-    name: "conv_apex_manifest",
     srcs: ["Empty.c"],
 }
 
