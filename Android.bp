@@ -3724,10 +3724,6 @@ sh_binary_host {
 // Genrule tools refs (libinput_cxx_bridge_code, inputflinger_rs_bootstrap_bridge_code,
 // libflags_rust_generated_cpp_bridge) resolve against the shadow binary.
 
-java_binary_host {
-    name: "metalava",
-    srcs: ["Empty.java"],
-}
 
 sh_binary_host {
     name: "dexdump",
