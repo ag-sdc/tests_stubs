@@ -4943,6 +4943,32 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
+rust_library {
+    name: "libclap",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "clap",
+    srcs: ["Empty.rs"],
+}
+
+cc_library {
+    name: "libkll",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
+    name: "libminikin-tests-util",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    srcs: ["Empty.c"],
+}
+
 cc_library_headers {
     name: "bpf_prog_headers",
     host_supported: true,
