@@ -5011,6 +5011,63 @@ cc_library_headers {
     export_include_dirs: ["include"],
 }
 
+rust_library {
+    name: "libforeign_types",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "foreign_types",
+    srcs: ["Empty.rs"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+rust_library {
+    name: "libarbitrary",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "arbitrary",
+    srcs: ["Empty.rs"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+rust_library {
+    name: "libnum_traits",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "num_traits",
+    srcs: ["Empty.rs"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+rust_library {
+    name: "liblibfuzzer_sys",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "libfuzzer_sys",
+    srcs: ["Empty.rs"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+
 
 
 
