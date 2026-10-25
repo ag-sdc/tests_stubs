@@ -4585,6 +4585,18 @@ java_library_host {
     srcs: ["Empty.java"],
 }
 
+cc_defaults {
+    name: "use_libaidlvintf_gtest_helper_static",
+}
+
+cc_defaults {
+    name: "libvintf_static_user_defaults",
+}
+
+cc_defaults {
+    name: "art_module_source_build_defaults",
+}
+
 java_library_host {
     name: "metalava-signature-reader",
     srcs: ["Empty.java"],
