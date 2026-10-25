@@ -1468,14 +1468,7 @@ cc_library {
 }
 
 
-cc_library {
-    name: "statsd-aidl-ndk",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    srcs: ["Empty.c"],
-}
+
 
 cc_library_static {
     name: "libnos_for_recovery",
