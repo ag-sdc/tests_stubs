@@ -3287,28 +3287,32 @@ java_library {
     name: "conscrypt.module.public.api.stubs",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "core_current",
+    sdk_version: "none",
+    system_modules: "none",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.system",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "core_current",
+    sdk_version: "none",
+    system_modules: "none",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.module_lib",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "core_current",
+    sdk_version: "none",
+    system_modules: "none",
 }
 
 java_library {
     name: "conscrypt.module.public.api.stubs.exportable",
     visibility: ["//visibility:public"],
     installable: false,
-    sdk_version: "core_current",
+    sdk_version: "none",
+    system_modules: "none",
 }
 
 java_library {
