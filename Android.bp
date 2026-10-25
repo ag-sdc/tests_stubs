@@ -4943,6 +4943,15 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
+cc_library_headers {
+    name: "bpf_prog_headers",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    export_include_dirs: ["include"],
+}
+
 
 
 
