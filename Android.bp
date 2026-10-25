@@ -4503,6 +4503,7 @@ cc_library_static {
 // Media APEX JNI stub
 cc_library_shared {
     name: "libmediaparser-jni",
+    min_sdk_version: "29",
     srcs: ["Empty.c"],
     apex_available: [
         "//apex_available:platform",
