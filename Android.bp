@@ -5074,3 +5074,26 @@ java_library {
     system_modules: "none",
     srcs: ["Empty.java"],
 }
+
+rust_library {
+    name: "libjni",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "jni",
+    srcs: ["Empty.rs"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+java_library {
+    name: "service-art.stubs.system_server",
+    visibility: ["//visibility:public"],
+    installable: false,
+    sdk_version: "none",
+    system_modules: "none",
+}
+
