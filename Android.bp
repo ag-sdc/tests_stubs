@@ -2914,25 +2914,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-filegroup {
-    name: "gcc.lib",
-    srcs: ["Empty.c"],
-}
-
-filegroup {
-    name: "gcc.lib32",
-    srcs: ["Empty.c"],
-}
-
-filegroup {
-    name: "gcc.lib64",
-    srcs: ["Empty.c"],
-}
-
-filegroup {
-    name: "gcc.sysroot",
-    srcs: ["Empty.c"],
-}
 
 filegroup {
     name: "platform_privapp_allowlist_com.android.cellbroadcastservice.xml",
