@@ -4953,6 +4953,26 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
+rust_library {
+    name: "libanyhow",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "anyhow",
+    srcs: ["Empty.rs"],
+}
+
+rust_library {
+    name: "libthiserror",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "thiserror",
+    srcs: ["Empty.rs"],
+}
+
 cc_library {
     name: "libkll",
     host_supported: true,
