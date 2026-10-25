@@ -4561,8 +4561,10 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_library_host {
+java_library {
     name: "testng",
+    host_supported: true,
+    sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
 
@@ -5096,4 +5098,18 @@ java_library {
     sdk_version: "none",
     system_modules: "none",
 }
+
+cc_library {
+    name: "ukey2_jni",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    srcs: ["Empty.c"],
+}
+
+droiddoc_exported_dir {
+    name: "droiddoc-templates-sdk",
+    path: ".",
+}
+
 
