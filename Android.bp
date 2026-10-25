@@ -4621,6 +4621,15 @@ cc_library {
 }
 
 cc_library {
+    name: "libgtest_isolated_main",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+}
+
+cc_library {
     name: "libgmock",
     host_supported: true,
     vendor_available: true,
@@ -4681,8 +4690,9 @@ cc_library {
     srcs: ["Empty.c"],
 }
 
-java_binary_host {
+java_binary {
     name: "metalava-manual",
+    host_supported: true,
     srcs: ["Empty.java"],
 }
 
