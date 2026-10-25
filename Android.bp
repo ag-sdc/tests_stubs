@@ -4882,10 +4882,15 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-// libflags_rust stub REMOVED: real artifacts ship in the
-// prebuilts/target/server_configurable_flags shadow (@2ee8806 -
-// lib/libflags_rust.rlib + libflags_rust_cpp_bridge.a + host lib64 rlib).
-// Artifacts-only (no rust_prebuilt_library) until an R2/R3 consumer wires it.
+rust_library {
+    name: "libflags_rust",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    crate_name: "flags_rust",
+    srcs: ["Empty.rs"],
+}
 
 rust_library {
     name: "liblazy_static",
