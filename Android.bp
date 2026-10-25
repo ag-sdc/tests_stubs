@@ -4707,6 +4707,15 @@ cc_library {
     srcs: ["Empty.c"],
 }
 
+cc_library {
+    name: "libgmock_main",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+}
+
 filegroup {
     name: "compatibility_matrix_schema",
     srcs: ["compatibility_matrix.xsd"],
