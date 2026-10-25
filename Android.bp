@@ -5099,12 +5099,11 @@ java_library {
     system_modules: "none",
 }
 
-cc_library {
+java_library {
     name: "ukey2_jni",
     host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    srcs: ["Empty.c"],
+    sdk_version: "core_current",
+    srcs: ["Empty.java"],
 }
 
 droiddoc_exported_dir {
