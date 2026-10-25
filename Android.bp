@@ -4717,6 +4717,7 @@ cc_library_headers {
     host_supported: true,
     vendor_available: true,
     product_available: true,
+    sdk_version: "current",
     export_include_dirs: ["include"],
 }
 
