@@ -1467,65 +1467,6 @@ cc_library {
     vendor_available: true,
 }
 
-cc_library {
-    name: "libstatssocket",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    min_sdk_version: "29",
-    stubs: {
-        symbol_file: "libstatssocket.map.txt",
-        versions: [
-            "30",
-            "current",
-        ],
-    },
-    apex_available: [
-        "//apex_available:anyapex",
-        "//apex_available:platform",
-    ],
-    srcs: ["Empty.c"],
-}
-
-cc_library {
-    name: "libstatspull",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    min_sdk_version: "29",
-    stubs: {
-        symbol_file: "libstatspull.map.txt",
-        versions: [
-            "30",
-            "current",
-        ],
-    },
-    apex_available: [
-        "//apex_available:anyapex",
-        "//apex_available:platform",
-    ],
-    srcs: ["Empty.c"],
-}
-
-cc_library_headers {
-    name: "libstatssocket_headers",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    export_include_dirs: ["include"],
-}
-
-cc_library_headers {
-    name: "libstatspull_headers",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    export_include_dirs: ["include"],
-}
 
 cc_library {
     name: "statsd-aidl-ndk",
@@ -4999,13 +4940,6 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-cc_library {
-    name: "libkll",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    srcs: ["Empty.c"],
-}
 
 cc_library {
     name: "libminikin-tests-util",
