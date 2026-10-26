@@ -5617,12 +5617,3 @@ java_library {
     sdk_version: "core_current",
     visibility: ["//visibility:public"],
 }
-
-cc_library_static {
-    name: "libext2_uuid",
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
-    srcs: ["Empty.c"],
-}
