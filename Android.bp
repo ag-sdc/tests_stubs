@@ -4516,8 +4516,7 @@ java_library_host {
 java_library {
     name: "stub-annotations",
     host_supported: true,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
 
@@ -5035,8 +5034,7 @@ cc_library {
 java_library {
     name: "private-stub-annotations-jar",
     host_supported: true,
-    sdk_version: "none",
-    system_modules: "none",
+    sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
 
