@@ -5615,3 +5615,53 @@ java_library {
     sdk_version: "core_current",
     visibility: ["//visibility:public"],
 }
+
+cc_defaults {
+    name: "service_fuzzer_defaults",
+}
+
+cc_defaults {
+    name: "fuzzer_disable_leaks",
+}
+
+cc_defaults {
+    name: "libsurfaceflinger_mocks_defaults",
+}
+
+filegroup {
+    name: "libsurfaceflinger_mock_sources",
+    srcs: ["Empty.c"],
+}
+
+cc_library_headers {
+    name: "libsurfaceflinger_mocks_headers",
+    host_supported: true,
+}
+
+java_library_host {
+    name: "compat-classpaths-testing",
+    srcs: ["Empty.java"],
+}
+
+cc_library_static {
+    name: "libsurfaceflingerflags_test",
+    host_supported: true,
+}
+
+android_library {
+    name: "SystemUICustomizationTestUtils",
+}
+
+android_library {
+    name: "SpaLibTestUtils",
+}
+
+filegroup {
+    name: "FrameworkResourcesSparseTestApp",
+    srcs: ["Sparse.txt"],
+}
+
+filegroup {
+    name: "FrameworkResourcesNotSparseTestApp",
+    srcs: ["NotSparse.txt"],
+}
