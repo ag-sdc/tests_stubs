@@ -5617,3 +5617,25 @@ java_library {
     sdk_version: "core_current",
     visibility: ["//visibility:public"],
 }
+
+cc_library_headers {
+    name: "libaidlmetadata_headers",
+    product_available: true,
+    recovery_available: true,
+    vendor_available: true,
+    host_supported: true,
+    export_include_dirs: ["include"],
+    visibility: ["//visibility:public"],
+}
+
+cc_library_static {
+    name: "aidl-analyzer-main",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["Empty.c"],
+    export_include_dirs: ["include"],
+    visibility: ["//visibility:public"],
+}
+
