@@ -4695,7 +4695,7 @@ cc_library {
 
 droiddoc_exported_dir {
     name: "metalava-manual",
-    path: ".",
+    path: "manual",
 }
 
 cc_library {
