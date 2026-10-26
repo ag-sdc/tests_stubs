@@ -3713,20 +3713,6 @@ sh_binary_host {
 // libflags_rust_generated_cpp_bridge) resolve against the shadow binary.
 
 
-sh_binary_host {
-    name: "dexdump",
-    src: "Empty.sh",
-}
-
-sh_binary_host {
-    name: "avbtool",
-    src: "Empty.sh",
-}
-
-sh_binary_host {
-    name: "mkbootimg",
-    src: "Empty.sh",
-}
 
 
 cc_defaults {
