@@ -2391,26 +2391,6 @@ java_api_contribution {
     visibility: ["//visibility:public"],
 }
 
-java_api_contribution {
-    name: "framework-media.stubs.source.api.contribution",
-    api_surface: "public",
-    api_file: "Empty.txt",
-    visibility: ["//visibility:public"],
-}
-
-java_api_contribution {
-    name: "framework-media.stubs.source.system.api.contribution",
-    api_surface: "system",
-    api_file: "Empty.txt",
-    visibility: ["//visibility:public"],
-}
-
-java_api_contribution {
-    name: "framework-media.stubs.source.module_lib.api.contribution",
-    api_surface: "module-lib",
-    api_file: "Empty.txt",
-    visibility: ["//visibility:public"],
-}
 
 java_api_contribution {
     name: "framework-tethering.stubs.source.api.contribution",
@@ -3978,57 +3958,10 @@ java_defaults {
     name: "framework-wifi-test-defaults",
 }
 
-java_library {
-    name: "updatable-media",
-    srcs: ["Empty.java"],
-    sdk_version: "core_current",
-    compile_dex: true,
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.media",
-        "//apex_available:anyapex",
-    ],
-    installable: true,
-}
 
-java_library {
-    name: "service-media-s",
-    srcs: ["Empty.java"],
-    sdk_version: "core_current",
-    compile_dex: true,
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.media",
-        "//apex_available:anyapex",
-    ],
-    installable: true,
-}
 
-cc_defaults {
-    name: "libgfxstream_guest_cc_defaults",
-    cflags: [
-        "-DVK_GFXSTREAM_STRUCTURE_TYPE_EXT",
-        "-DGFXSTREAM_ENABLE_GUEST_GOLDFISH=1",
-        "-Wno-missing-field-initializers",
-        "-Wno-unused-parameter",
-    ],
-    product_variables: {
-        platform_sdk_version: {
-            cflags: ["-DANDROID_API_LEVEL=%d"],
-        },
-    },
-}
 
-cc_library_headers {
-    name: "libqemupipe-types.ranchu",
-    vendor_available: true,
-}
 
-cc_library_static {
-    name: "libqemupipe.ranchu",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
 cc_library_static {
     name: "libc_malloc_debug_backtrace",
@@ -4057,19 +3990,6 @@ cc_library_static {
     srcs: ["Empty.c"],
 }
 
-rust_library {
-    name: "liblogger",
-    crate_name: "logger",
-    srcs: ["Empty.rs"],
-    host_supported: true,
-    vendor_available: true,
-    product_available: true,
-    apex_available: [
-        "//apex_available:platform",
-        "//apex_available:anyapex",
-    ],
-    min_sdk_version: "29",
-}
 
 java_library {
     name: "net-tests-utils",
@@ -4087,6 +4007,11 @@ java_library {
 java_library {
     name: "net-utils-framework-common",
     sdk_version: "core_current",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "net-utils-framework-common-srcs",
     srcs: ["Empty.java"],
 }
 
@@ -4182,47 +4107,6 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-// Media
-java_library {
-    name: "framework-media",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.stubs",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.stubs.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.stubs.exportable",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.stubs.exportable.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "framework-media.impl",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
 
 // Tethering
 java_import {
@@ -4308,17 +4192,6 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-// Service Media S
-java_library {
-    name: "service-media-s.stubs.system_server",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-java_library {
-    name: "service-media-s.stubs.exportable.system_server",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
 
 // Heapprofd client api
 cc_library_shared {
@@ -4379,35 +4252,10 @@ java_library {
 }
 
 // Goldfish OpenGL stubs
-cc_library_static {
-    name: "libGoldfishAddressSpace",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
-cc_library_shared {
-    name: "libGLESv1_enc",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
-cc_library_shared {
-    name: "lib_renderControl_enc",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
-cc_library_shared {
-    name: "libOpenglCodecCommon",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
-cc_library_shared {
-    name: "libOpenglSystemCommon",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
 // Goldfish sensor and audio HAL dependencies
 cc_library_headers {
@@ -4434,17 +4282,8 @@ cc_library_shared {
 }
 
 // Goldfish gralloc cb header
-cc_library_headers {
-    name: "libgralloc_cb.ranchu",
-    vendor_available: true,
-}
 
 // Goldfish codec2 libplatform stub
-cc_library_static {
-    name: "libplatform",
-    vendor_available: true,
-    srcs: ["Empty.c"],
-}
 
 // Seccomp policy stub
 cc_library_static {
@@ -4456,15 +4295,6 @@ cc_library_static {
 }
 
 // Media APEX JNI stub
-cc_library_shared {
-    name: "libmediaparser-jni",
-    min_sdk_version: "29",
-    srcs: ["Empty.c"],
-    apex_available: [
-        "//apex_available:platform",
-        "com.android.media",
-    ],
-}
 
 // Atest prebuilt stub
 filegroup {
@@ -4563,10 +4393,6 @@ java_library_host {
     srcs: ["Empty.java"],
 }
 
-java_library_host {
-    name: "annotations",
-    srcs: ["Empty.java"],
-}
 
 cc_defaults {
     name: "use_libaidlvintf_gtest_helper_static",
@@ -5309,11 +5135,6 @@ filegroup {
     srcs: ["Empty.java"],
 }
 
-filegroup {
-    name: "updatable-media-srcs",
-    visibility: ["//visibility:public"],
-    srcs: ["Empty.java"],
-}
 
 filegroup {
     name: "com.android.art.debug",
