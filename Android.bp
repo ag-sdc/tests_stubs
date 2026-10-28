@@ -4095,6 +4095,16 @@ filegroup {
     srcs: ["Empty.java"],
 }
 
+filegroup {
+    name: "net-utils-framework-wifi-common-srcs",
+    srcs: ["Empty.java"],
+}
+
+filegroup {
+    name: "net-utils-telephony-common-srcs",
+    srcs: ["Empty.java"],
+}
+
 java_library {
     name: "net-utils-services-common",
     sdk_version: "core_current",
