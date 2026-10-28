@@ -3983,6 +3983,32 @@ cc_library_headers {
     export_include_dirs: ["include"],
 }
 
+java_library {
+    name: "updatable-media",
+    srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    compile_dex: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+        "//apex_available:anyapex",
+    ],
+    installable: true,
+}
+
+java_library {
+    name: "service-media-s",
+    srcs: ["Empty.java"],
+    sdk_version: "core_current",
+    compile_dex: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.media",
+        "//apex_available:anyapex",
+    ],
+    installable: true,
+}
+
 cc_library_static {
     name: "libip_checksum",
     vendor_available: true,
