@@ -5440,18 +5440,24 @@ prebuilt_bootclasspath_fragment {
     prefer: true,
 }
 
-java_import {
+java_library {
     name: "framework-statsd",
     visibility: ["//visibility:public"],
-    jars: ["Empty.jar"],
-    prefer: true,
+    srcs: [
+        "android/util/StatsLog.java",
+        "android/util/StatsEvent.java",
+    ],
+    sdk_version: "core_current",
 }
 
-java_import {
+java_library {
     name: "framework-statsd.stubs.module_lib",
     visibility: ["//visibility:public"],
-    jars: ["Empty.jar"],
-    prefer: true,
+    srcs: [
+        "android/util/StatsLog.java",
+        "android/util/StatsEvent.java",
+    ],
+    sdk_version: "core_current",
 }
 
 java_import {
