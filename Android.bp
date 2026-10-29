@@ -4532,7 +4532,7 @@ java_library {
     name: "stub-annotations",
     host_supported: true,
     sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    static_libs: ["framework-annotations-lib"],
 }
 
 java_library {
@@ -5050,7 +5050,7 @@ java_library {
     name: "private-stub-annotations-jar",
     host_supported: true,
     sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    static_libs: ["framework-annotations-lib"],
 }
 
 rust_library {
@@ -5128,6 +5128,7 @@ java_library {
     name: "core-lambda-stubs-for-system-modules",
     visibility: ["//visibility:public"],
     installable: false,
+    static_libs: ["core-lambda-stubs"],
     sdk_version: "none",
     system_modules: "none",
 }
