@@ -2473,11 +2473,12 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_library {
+java_import {
     name: "framework-virtualization.stubs.module_lib",
     host_supported: true,
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-virtualization.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
 java_library {
@@ -2492,16 +2493,18 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_library {
+java_import {
     name: "framework-bluetooth.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-bluetooth.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
-java_library {
+java_import {
     name: "framework-connectivity.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-connectivity.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
 java_library {
@@ -2522,10 +2525,11 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_library {
+java_import {
     name: "framework-bluetooth.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-bluetooth.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
 java_library {
@@ -2590,16 +2594,18 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_library {
+java_import {
     name: "sdk_module-lib_current_framework-connectivity",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-connectivity.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
-java_library {
+java_import {
     name: "sdk_module-lib_current_framework-permission-s",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-permission-s.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
 cc_defaults {
@@ -4149,10 +4155,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-connectivity.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-connectivity.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-connectivity.impl",
@@ -4213,10 +4220,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-media.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-media.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-media.stubs.exportable",
@@ -4228,10 +4236,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-media.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-media.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-media.impl",
@@ -4255,10 +4264,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-tethering.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-tethering.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-tethering.stubs.exportable",
@@ -4270,10 +4280,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-tethering.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-tethering.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-tethering.impl",
@@ -4297,10 +4308,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-wifi.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-wifi.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-wifi.stubs.exportable",
@@ -4312,10 +4324,11 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+java_import {
     name: "framework-wifi.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/module-lib/framework-wifi.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 java_library {
     name: "framework-wifi.impl",
@@ -4324,15 +4337,17 @@ java_library {
 }
 
 // Service Media S
-java_library {
+java_import {
     name: "service-media-s.stubs.system_server",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/system-server/service-media-s.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
-java_library {
+java_import {
     name: "service-media-s.stubs.exportable.system_server",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
+    jars: ["../prebuilts/sdk/current/system-server/service-media-s.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
 // Heapprofd client api
@@ -4387,10 +4402,11 @@ cc_library_shared {
 }
 
 // Connectivity Tiramisu pre-jarjar
-java_library {
+java_import {
     name: "service-connectivity-tiramisu-pre-jarjar",
-    srcs: ["Empty.java"],
-    sdk_version: "core_platform",
+    jars: ["../prebuilts/sdk/current/module-lib/framework-connectivity-t.jar"],
+    sdk_version: "none",
+    visibility: ["//visibility:public"],
 }
 
 // Goldfish OpenGL stubs
@@ -5067,12 +5083,11 @@ rust_library {
     ],
 }
 
-java_library {
+java_import {
     name: "service-art.stubs.system_server",
-    visibility: ["//visibility:public"],
-    installable: false,
+    jars: ["../prebuilts/sdk/current/system-server/service-art.jar"],
     sdk_version: "none",
-    system_modules: "none",
+    visibility: ["//visibility:public"],
 }
 
 java_library {
@@ -5450,14 +5465,11 @@ java_library {
     sdk_version: "core_current",
 }
 
-java_library {
+java_import {
     name: "framework-statsd.stubs.module_lib",
+    jars: ["../prebuilts/sdk/current/module-lib/framework-statsd.jar"],
+    sdk_version: "none",
     visibility: ["//visibility:public"],
-    srcs: [
-        "android/util/StatsLog.java",
-        "android/util/StatsEvent.java",
-    ],
-    sdk_version: "core_current",
 }
 
 java_import {
@@ -5541,20 +5553,18 @@ cc_library {
     double_loadable: true,
 }
 
-java_library {
+java_import {
     name: "service-rkp.stubs.system_server",
-    visibility: ["//visibility:public"],
-    installable: false,
+    jars: ["../prebuilts/sdk/current/system-server/service-rkp.jar"],
     sdk_version: "none",
-    system_modules: "none",
+    visibility: ["//visibility:public"],
 }
 
-java_library {
+java_import {
     name: "service-sdksandbox.stubs.system_server",
-    visibility: ["//visibility:public"],
-    installable: false,
+    jars: ["../prebuilts/sdk/current/system-server/service-sdksandbox.jar"],
     sdk_version: "none",
-    system_modules: "none",
+    visibility: ["//visibility:public"],
 }
 
 java_library {
