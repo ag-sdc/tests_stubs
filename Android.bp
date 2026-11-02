@@ -58,7 +58,6 @@ cc_defaults {
     name: "libapexd-deps",
 }
 
-
 // -----------------------------------------------------------------------------
 // Test Harness Java Libraries
 // -----------------------------------------------------------------------------
@@ -1383,7 +1382,6 @@ java_library {
     ],
 }
 
-
 cc_defaults {
     name: "carwatchdogd_defaults",
 }
@@ -1391,6 +1389,7 @@ cc_defaults {
 cc_defaults {
     name: "libwatchdog_perf_service_defaults",
 }
+
 java_library {
     name: "xmp_toolkit",
     srcs: ["Empty.java"],
@@ -1437,7 +1436,6 @@ cc_library {
     host_supported: true,
 }
 
-
 cc_library_static {
     name: "VtsHalHidlTestUtils",
     host_supported: true,
@@ -1460,9 +1458,6 @@ cc_library {
     vendor_available: true,
 }
 
-
-
-
 cc_library_static {
     name: "libnos_for_recovery",
     recovery_available: true,
@@ -1474,6 +1469,7 @@ cc_library_static {
     recovery_available: true,
     vendor_available: true,
 }
+
 java_library {
     name: "CtsSurfaceValidatorLib",
     host_supported: true,
@@ -1516,7 +1512,6 @@ cc_library_headers {
 
 // frameworks/rs is dropped from the framework-only tree; consumer is
 // android.hardware.renderscript@1.0-impl (runtime_libs).
-
 
 // External codec sources (dav1d, libgav1, libhevc, libavc, libmpeg2, libgsm, libogg) are not in the
 // framework-only tree and have no extractive shadows yet (not in the ag registry); consumers
@@ -1756,7 +1751,6 @@ java_test {
     host_supported: true,
 }
 
-
 // ActivityContext is defined in the cts repo (common/device-side/bedstead/activitycontext);
 // the framework-only tree drops cts. Consumers are test-only (FrameworksServicesTests,
 // PackageManagerServiceServerTests), so an empty stub resolves the build graph.
@@ -1943,7 +1937,6 @@ cc_library_static {
     host_supported: true,
 }
 
-
 java_library {
     name: "ot-daemon-testing",
     sdk_version: "module_current",
@@ -1952,64 +1945,6 @@ java_library {
 // -----------------------------------------------------------------------------
 // Systematic Batch Stubs for Slim Framework Build
 // -----------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 cc_library_headers {
     name: "libberberis_native_activity_headers",
@@ -2024,20 +1959,6 @@ cc_library_headers {
         "//apex_available:anyapex",
     ],
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 cc_library {
     name: "libpsi",
@@ -2159,10 +2080,6 @@ cc_library {
     ],
 }
 
-
-
-
-
 cc_library_static {
     name: "libbluetooth-types",
     host_supported: true,
@@ -2192,16 +2109,6 @@ cc_library_static {
         "//apex_available:anyapex",
     ],
 }
-
-
-
-
-
-
-
-
-
-
 
 cc_binary {
     name: "blkid_static",
@@ -2239,9 +2146,6 @@ cc_binary {
     srcs: ["Empty.c"],
 }
 
-
-
-
 python_library_host {
     name: "fastboot_gen_rand",
     srcs: ["Empty.py"],
@@ -2252,18 +2156,6 @@ python_library_host {
     srcs: ["Empty.py"],
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 java_library_host {
     name: "tzids",
     srcs: ["Empty.java"],
@@ -2273,7 +2165,6 @@ java_library_host {
     name: "tztools_common",
     srcs: ["Empty.java"],
 }
-
 
 java_sdk_library_import {
     name: "framework-bluetooth",
@@ -2315,18 +2206,6 @@ java_library {
     host_supported: true,
     srcs: ["Empty.java"],
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 java_api_contribution {
     name: "framework-bluetooth.stubs.source.api.contribution",
@@ -2454,14 +2333,6 @@ java_api_contribution {
     visibility: ["//visibility:public"],
 }
 
-
-
-
-
-
-
-
-
 // -----------------------------------------------------------------------------
 // Transitive AIDL/HIDL & SDK Stub Stubs for framework-minus-apex
 // -----------------------------------------------------------------------------
@@ -2565,8 +2436,6 @@ java_library {
 
 // Batch resolved dependencies from comprehensive tree scan
 
-
-
 java_library {
     name: "cts-input-lib",
     host_supported: true,
@@ -2600,8 +2469,6 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-
-
 
 cc_defaults {
     name: "libwifi-hal-mediatek",
@@ -2669,7 +2536,6 @@ cc_library {
     srcs: ["Empty.c"],
 }
 
-
 cc_library {
     name: "libcppcose_rkp",
     host_supported: true,
@@ -2685,8 +2551,6 @@ cc_library {
     stl: "c++_static",
     srcs: ["Empty.c"],
 }
-
-
 
 cc_library {
     name: "libhbm_minigbm",
@@ -2722,7 +2586,6 @@ cc_library {
     vendor_available: true,
     srcs: ["Empty.c"],
 }
-
 
 cc_library {
     name: "libservicefs",
@@ -2842,11 +2705,6 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-
-
-
-
-
 java_library {
     name: "TextClassifierCoverageLib",
     host_supported: true,
@@ -2860,9 +2718,6 @@ java_library {
     srcs: ["Empty.java"],
     installable: true,
 }
-
-
-
 
 cc_binary {
     name: "ethtool",
@@ -2908,7 +2763,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-
 filegroup {
     name: "platform_privapp_allowlist_com.android.cellbroadcastservice.xml",
     srcs: ["Empty.c"],
@@ -2938,7 +2792,6 @@ filegroup {
     name: "platform-test-screenshot-rules",
     srcs: ["Empty.java"],
 }
-
 
 filegroup {
     name: "android_audio_base_header_file",
@@ -3000,7 +2853,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-
 filegroup {
     name: "CtsProviderTestUtils",
     srcs: ["Empty.java"],
@@ -3046,7 +2898,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-
 droidstubs {
     name: "android.car-stubs-docs",
     srcs: ["Empty.java"],
@@ -3083,7 +2934,6 @@ filegroup {
     srcs: ["Empty.java"],
 }
 
-
 cc_defaults {
     name: "non-d",
 }
@@ -3092,9 +2942,6 @@ filegroup {
     name: "BluetoothPacketSources",
     srcs: ["Empty.c"],
 }
-
-
-
 
 filegroup {
     name: "com.android.adservices.ondevicepersonalization",
@@ -3116,20 +2963,15 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-
 filegroup {
     name: "com.android.nfcservices",
     srcs: ["Empty.c"],
 }
 
-
 filegroup {
     name: "com.android.remoteauth",
     srcs: ["Empty.c"],
 }
-
-
-
 
 java_api_contribution {
     name: "conscrypt.module.public.api.stubs.source.api.contribution",
@@ -3150,36 +2992,6 @@ java_api_contribution {
     api_surface: "module-lib",
     api_file: "Empty.txt",
     visibility: ["//visibility:public"],
-}
-
-java_sdk_library_import {
-    name: "conscrypt.module.public.api",
-    shared_library: false,
-    public: {
-        jars: [":sdk_public_current_conscrypt"],
-        stub_srcs: ["Empty.srcjar"],
-        current_api: "Empty.txt",
-        removed_api: "Empty.txt",
-        annotations: "Empty.txt",
-        sdk_version: "none",
-    },
-    system: {
-        jars: [":sdk_system_current_conscrypt"],
-        stub_srcs: ["Empty.srcjar"],
-        current_api: "Empty.txt",
-        removed_api: "Empty.txt",
-        annotations: "Empty.txt",
-        sdk_version: "none",
-    },
-    module_lib: {
-        jars: [":sdk_module-lib_current_conscrypt"],
-        stub_srcs: ["Empty.srcjar"],
-        current_api: "Empty.txt",
-        removed_api: "Empty.txt",
-        annotations: "Empty.txt",
-        sdk_version: "none",
-    },
-    prefer: true,
 }
 
 java_library {
@@ -3353,6 +3165,7 @@ java_library {
     sdk_version: "none",
     system_modules: "none",
 }
+
 java_import {
     name: "framework-virtualization",
     jars: ["Empty.jar"],
@@ -3408,8 +3221,6 @@ prebuilt_bootclasspath_fragment {
     },
     prefer: true,
 }
-
-
 
 java_import {
     name: "service-bluetooth",
@@ -3645,8 +3456,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-
-
 filegroup {
     name: "test_com.android.conscrypt",
     srcs: ["Empty.c"],
@@ -3713,9 +3522,6 @@ sh_binary_host {
 // Genrule tools refs (libinput_cxx_bridge_code, inputflinger_rs_bootstrap_bridge_code,
 // libflags_rust_generated_cpp_bridge) resolve against the shadow binary.
 
-
-
-
 cc_defaults {
     name: "neuralnetworks_defaults",
 }
@@ -3739,10 +3545,6 @@ cc_library_static {
     ],
 }
 
-
-
-
-
 // Stubs for undefined dependencies referenced by prebuilts/target/framework/*
 cc_library_static {
     name: "float_from_i32",
@@ -3765,13 +3567,6 @@ cc_library_headers {
     ],
 }
 
-
-
-
-
-
-
-
 cc_defaults {
     name: "keystore_defaults",
 
@@ -3784,14 +3579,14 @@ cc_defaults {
 
     sanitize: {
         misc_undefined: [
-             "signed-integer-overflow",
-             "unsigned-integer-overflow",
-             "shift",
-             "integer-divide-by-zero",
-             "implicit-unsigned-integer-truncation",
-             // BUG: 123630767
-             //"implicit-signed-integer-truncation",
-             "implicit-integer-sign-change",
+            "signed-integer-overflow",
+            "unsigned-integer-overflow",
+            "shift",
+            "integer-divide-by-zero",
+            "implicit-unsigned-integer-truncation",
+            // BUG: 123630767
+            //"implicit-signed-integer-truncation",
+            "implicit-integer-sign-change",
         ],
     },
 
@@ -3814,7 +3609,6 @@ cc_library {
     host_supported: true,
     srcs: ["Empty.c"],
 }
-
 
 cc_binary_host {
     name: "make_f2fs_casefold",
@@ -3961,7 +3755,6 @@ filegroup {
     name: "renderscript-clang-include",
     srcs: ["Empty.txt"],
 }
-
 
 // TODO: real rewrapper comes from prebuilts/remoteexecution-client (not in slim tree);
 // stub satisfies analysis for art run-test data shards, which m framework-minus-apex
@@ -4130,33 +3923,39 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity.stubs",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity.stubs.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity.stubs.exportable",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity.stubs.exportable.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-connectivity.stubs.exportable.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-connectivity"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-connectivity.impl",
     sdk_version: "core_current",
@@ -4169,31 +3968,37 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity-t.stubs",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity-t.stubs.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity-t.stubs.exportable",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity-t.stubs.exportable.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity-t.stubs.exportable.module_lib",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-connectivity-t.impl",
     sdk_version: "core_current",
@@ -4206,40 +4011,47 @@ java_library {
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-media.stubs",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-media.stubs.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-media.stubs.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-media"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-media.stubs.exportable",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-media.stubs.exportable.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-media.stubs.exportable.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-media"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-media.impl",
     sdk_version: "core_current",
@@ -4252,40 +4064,47 @@ java_import {
     jars: ["Empty.jar"],
     prefer: true,
 }
+
 java_library {
     name: "framework-tethering.stubs",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-tethering.stubs.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-tethering.stubs.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-tethering"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-tethering.stubs.exportable",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-tethering.stubs.exportable.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-tethering.stubs.exportable.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-tethering"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-tethering.impl",
     sdk_version: "core_current",
@@ -4298,40 +4117,47 @@ java_import {
     jars: ["Empty.jar"],
     prefer: true,
 }
+
 java_library {
     name: "framework-wifi.stubs",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-wifi.stubs.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-wifi.stubs.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-wifi"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-wifi.stubs.exportable",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
+
 java_library {
     name: "framework-wifi.stubs.exportable.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
-java_library {
+
+java_import {
     name: "framework-wifi.stubs.exportable.module_lib",
     sdk_version: "none",
     system_modules: "none",
     static_libs: ["sdk_module-lib_current_framework-wifi"],
     visibility: ["//visibility:public"],
 }
+
 java_library {
     name: "framework-wifi.impl",
     sdk_version: "core_current",
@@ -4346,7 +4172,8 @@ java_library {
     static_libs: ["sdk_system-server_current_service-media-s"],
     visibility: ["//visibility:public"],
 }
-java_library {
+
+java_import {
     name: "service-media-s.stubs.exportable.system_server",
     sdk_version: "none",
     system_modules: "none",
@@ -4935,7 +4762,6 @@ rust_library {
     srcs: ["Empty.rs"],
 }
 
-
 cc_library {
     name: "libminikin-tests-util",
     host_supported: true,
@@ -5065,12 +4891,6 @@ cc_library {
     srcs: ["Empty.c"],
 }
 
-
-
-
-
-
-
 java_library {
     name: "private-stub-annotations-jar",
     host_supported: true,
@@ -5096,7 +4916,6 @@ rust_library {
     ],
 }
 
-
 java_library {
     name: "ukey2_jni",
     host_supported: true,
@@ -5108,8 +4927,6 @@ droiddoc_exported_dir {
     name: "droiddoc-templates-sdk",
     path: ".",
 }
-
-
 
 java_library {
     name: "art.module.public.api.stubs",
@@ -5169,7 +4986,10 @@ java_library {
     installable: false,
     sdk_version: "none",
     system_modules: "none",
-    static_libs: ["core-oj", "core-libart"],
+    static_libs: [
+        "core-oj",
+        "core-libart",
+    ],
 }
 
 java_system_modules {
@@ -5286,36 +5106,6 @@ java_library {
 }
 
 java_sdk_library_import {
-    name: "art.module.public.api",
-    shared_library: false,
-    public: {
-        jars: [":sdk_public_current_art"],
-        stub_srcs: ["Empty.srcjar"],
-        current_api: "Empty.txt",
-        removed_api: "Empty.txt",
-        annotations: "Empty.txt",
-        sdk_version: "none",
-    },
-    system: {
-        jars: [":sdk_system_current_art"],
-        stub_srcs: ["Empty.srcjar"],
-        current_api: "Empty.txt",
-        removed_api: "Empty.txt",
-        annotations: "Empty.txt",
-        sdk_version: "none",
-    },
-    module_lib: {
-        jars: [":sdk_module-lib_current_art"],
-        stub_srcs: ["Empty.srcjar"],
-        current_api: "Empty.txt",
-        removed_api: "Empty.txt",
-        annotations: "Empty.txt",
-        sdk_version: "none",
-    },
-    prefer: true,
-}
-
-java_sdk_library_import {
     name: "service-art",
     shared_library: false,
     system_server: {
@@ -5363,7 +5153,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-
 filegroup {
     name: "com.android.geotz",
     srcs: ["Empty.c"],
@@ -5393,7 +5182,6 @@ filegroup {
     name: "com.android.wifi",
     srcs: ["Empty.c"],
 }
-
 
 filegroup {
     name: "nfc_nci.st21nfc.default",
@@ -5529,15 +5317,6 @@ cc_library_static {
     srcs: ["Empty.c"],
     host_supported: true,
 }
-
-
-
-
-
-
-
-
-
 
 cc_library_headers {
     name: "libstatssocket_headers",
