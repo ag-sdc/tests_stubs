@@ -2345,22 +2345,6 @@ java_library {
 }
 
 java_library {
-    name: "framework-virtualization.stubs.module_lib",
-    host_supported: true,
-    sdk_version: "none",
-    system_modules: "none",
-    target: {
-        android: {
-            static_libs: ["sdk_module-lib_current_framework-virtualization"],
-        },
-        host: {
-            srcs: ["Empty.java"],
-        },
-    },
-    visibility: ["//visibility:public"],
-}
-
-java_library {
     name: "framework-bluetooth.stubs",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
@@ -2368,26 +2352,6 @@ java_library {
 
 java_library {
     name: "framework-bluetooth.stubs.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-bluetooth.stubs.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity.stubs.module_lib",
-    sdk_version: "none",
-    system_modules: "none",
-    static_libs: ["sdk_module-lib_current_framework-connectivity"],
-    visibility: ["//visibility:public"],
-}
-
-java_library {
-    name: "framework-connectivity-t.stubs.module_lib",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
 }
@@ -4019,14 +3983,6 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_import {
-    name: "framework-media.stubs.module_lib",
-    sdk_version: "none",
-    system_modules: "none",
-    static_libs: ["sdk_module-lib_current_framework-media"],
-    visibility: ["//visibility:public"],
-}
-
 java_library {
     name: "framework-media.stubs.exportable",
     sdk_version: "core_current",
@@ -4123,14 +4079,6 @@ java_library {
     name: "framework-wifi.stubs.system",
     sdk_version: "core_current",
     srcs: ["Empty.java"],
-}
-
-java_import {
-    name: "framework-wifi.stubs.module_lib",
-    sdk_version: "none",
-    system_modules: "none",
-    static_libs: ["sdk_module-lib_current_framework-wifi"],
-    visibility: ["//visibility:public"],
 }
 
 java_library {
@@ -5253,14 +5201,6 @@ java_library {
         "android/util/StatsEvent.java",
     ],
     sdk_version: "core_current",
-}
-
-java_library {
-    name: "framework-statsd.stubs.module_lib",
-    sdk_version: "none",
-    system_modules: "none",
-    static_libs: ["sdk_module-lib_current_framework-statsd"],
-    visibility: ["//visibility:public"],
 }
 
 java_import {
