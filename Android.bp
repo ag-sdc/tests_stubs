@@ -4554,6 +4554,10 @@ java_library {
     host_supported: true,
     sdk_version: "core_current",
     static_libs: ["framework-annotations-lib"],
+    srcs: [
+        "androidx/annotation/RecentlyNullable.java",
+        "androidx/annotation/RecentlyNonNull.java",
+    ],
 }
 
 java_library {
@@ -5072,6 +5076,10 @@ java_library {
     host_supported: true,
     sdk_version: "core_current",
     static_libs: ["framework-annotations-lib"],
+    srcs: [
+        "androidx/annotation/RecentlyNullable.java",
+        "androidx/annotation/RecentlyNonNull.java",
+    ],
 }
 
 rust_library {
