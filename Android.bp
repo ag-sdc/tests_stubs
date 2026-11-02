@@ -2889,11 +2889,6 @@ filegroup {
 }
 
 filegroup {
-    name: "gatekeeper_aidl",
-    srcs: ["Empty.c"],
-}
-
-filegroup {
     name: "logd_aidl",
     srcs: ["Empty.c"],
 }
