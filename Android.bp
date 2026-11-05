@@ -2852,11 +2852,6 @@ filegroup {
     srcs: ["Empty.c"],
 }
 
-filegroup {
-    name: "logd_aidl",
-    srcs: ["Empty.c"],
-}
-
 droidstubs {
     name: "android.car-stubs-docs",
     srcs: ["Empty.java"],
@@ -4276,21 +4271,6 @@ cc_library_shared {
 filegroup {
     name: "atest-py3-prebuilt",
     srcs: ["Empty.c"],
-}
-
-// GsiService AIDL filegroup
-filegroup {
-    name: "gsiservice_aidl",
-    srcs: [
-        "aidl/android/gsi/AvbPublicKey.aidl",
-        "aidl/android/gsi/GsiProgress.aidl",
-        "aidl/android/gsi/IGsiService.aidl",
-        "aidl/android/gsi/IGsiServiceCallback.aidl",
-        "aidl/android/gsi/IImageService.aidl",
-        "aidl/android/gsi/IProgressCallback.aidl",
-        "aidl/android/gsi/MappedImage.aidl",
-    ],
-    path: "aidl",
 }
 
 cc_library_headers {
