@@ -3000,21 +3000,6 @@ java_library {
     system_modules: "none",
 }
 
-java_library {
-    name: "conscrypt.module.platform.api.stubs",
-    visibility: ["//visibility:public"],
-    installable: false,
-    sdk_version: "none",
-    system_modules: "none",
-}
-
-java_library {
-    name: "conscrypt.module.platform.api.stubs.exportable",
-    visibility: ["//visibility:public"],
-    installable: false,
-    sdk_version: "none",
-    system_modules: "none",
-}
 
 java_api_contribution {
     name: "conscrypt.module.platform.api.stubs.source.api.contribution",
