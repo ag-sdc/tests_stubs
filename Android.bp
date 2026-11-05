@@ -5248,13 +5248,6 @@ java_library {
     visibility: ["//visibility:public"],
 }
 
-java_library {
-    name: "service-sdksandbox.stubs.system_server",
-    sdk_version: "none",
-    system_modules: "none",
-    static_libs: ["sdk_system-server_current_service-sdksandbox"],
-    visibility: ["//visibility:public"],
-}
 
 java_library {
     name: "statsdprotolite",
