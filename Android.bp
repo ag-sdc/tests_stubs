@@ -3178,13 +3178,6 @@ prebuilt_systemserverclasspath_fragment {
     prefer: true,
 }
 
-java_library {
-    name: "ota_metadata_proto_java",
-    host_supported: true,
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
 cc_library {
     name: "libapexsupport",
     double_loadable: true,
@@ -3833,110 +3826,6 @@ filegroup {
     srcs: ["Empty.java"],
 }
 
-filegroup {
-    name: "net-utils-telephony-common-srcs",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "net-utils-services-common",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "netd-client",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-// Connectivity
-java_library {
-    name: "framework-connectivity",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity.stubs",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity.stubs.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity.stubs.exportable",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity.stubs.exportable.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_import {
-    name: "framework-connectivity.stubs.exportable.module_lib",
-    sdk_version: "none",
-    system_modules: "none",
-    static_libs: ["sdk_module-lib_current_framework-connectivity"],
-    visibility: ["//visibility:public"],
-}
-
-java_library {
-    name: "framework-connectivity.impl",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-// Connectivity-T
-java_library {
-    name: "framework-connectivity-t",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity-t.stubs",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity-t.stubs.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity-t.stubs.exportable",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity-t.stubs.exportable.system",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity-t.stubs.exportable.module_lib",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
-java_library {
-    name: "framework-connectivity-t.impl",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
 
 // Media
 java_library {
@@ -4816,13 +4705,6 @@ rust_library {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
-}
-
-java_library {
-    name: "ukey2_jni",
-    host_supported: true,
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
 }
 
 droiddoc_exported_dir {
