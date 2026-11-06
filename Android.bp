@@ -2719,7 +2719,7 @@ filegroup {
 
 filegroup {
     name: "libtombstone_proto-src",
-    srcs: ["Empty.proto"],
+    srcs: ["tombstone.proto"],
 }
 
 filegroup {
