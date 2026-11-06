@@ -3850,12 +3850,6 @@ java_library {
     srcs: ["Empty.java"],
 }
 
-java_library {
-    name: "networkstack-client",
-    sdk_version: "core_current",
-    srcs: ["Empty.java"],
-}
-
 // Connectivity
 java_library {
     name: "framework-connectivity",
