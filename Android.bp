@@ -5140,7 +5140,7 @@ filegroup {
 filegroup {
     name: "statslog-cellbroadcast-java-gen",
     visibility: ["//visibility:public"],
-    srcs: ["Empty.java"],
+    srcs: ["CellBroadcastStatsLog.java"],
 }
 
 filegroup {
