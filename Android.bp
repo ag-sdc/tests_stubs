@@ -3300,6 +3300,10 @@ java_library {
     name: "ecc-protos-lite",
     proto: {
         type: "nano",
+        output_params: [
+            "store_unknown_fields=true",
+            "enum_style=java",
+        ],
     },
     srcs: ["protobuf_ecc_data.proto"],
     sdk_version: "core_current",
